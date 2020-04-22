@@ -2,7 +2,7 @@
 ![enter image description here](https://notenoughtech.com/wp-content/uploads/2020/04/YouTube-Thumb-6.jpg)
 I needed a simple flow for inching mechanism. If you don't know what "inching" means, it's a fancy term for turning a thing ON and then turning it OFF a couple of seconds/minutes later. You could call it a timer wannabee with a preset timer.
 
- - [Complete instructions](https://notenoughtech.com/home-automation/nodered-home-automation/"inching"-like-a-pro-(nodered-edition)/)
+ - [Complete instructions](https://notenoughtech.com/home-automation/nodered-home-automation/inching)
 
 **Features**:
 -    Custom timout
@@ -15,7 +15,7 @@ I needed a simple flow for inching mechanism. If you don't know what "inching" m
 
 # Settings
 
- - **timeout** - yime in seconds to take the opposite action
+ - **timeout** - time in seconds to take the opposite action
  
  ## More about me:
 
