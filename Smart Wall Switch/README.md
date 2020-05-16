@@ -2,7 +2,7 @@
 ![enter image description here](https://notenoughtech.com/wp-content/uploads/2020/03/maxresdefault-1.jpg)
 This projects adds extra features to the spare gang in a smart switch. Using an n+1 formula I add options to automate more light sources in the bedroom, adding automatic shutdown what work with a connected projector, IKEA dimmer integration and more!
 
- - [Complete instructions]([https://notenoughtech.com/home-automation/creating-a-smarter-light-switch/](https://notenoughtech.com/home-automation/creating-a-smarter-light-switch/)
+ - [Complete instructions](https://notenoughtech.com/home-automation/creating-a-smarter-light-switch/)
 
 **Features**:
 -    **1st gang**  – control main lights
