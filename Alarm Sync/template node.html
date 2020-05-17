@@ -1,0 +1,142 @@
+<style>
+
+table {
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, th {
+    border: 1px solid transparent;
+    /* No more visible border */
+    height: 30px;
+    transition: all 0.3s;
+    /* Simple transition for hover effect */
+}
+th {
+    background: #DFDFDF;
+    /* Darken header a bit */
+    font-weight: bold;
+}
+td {
+    background: #FAFAFA;
+}
+
+/* Cells in even rows (2,4,6...) are one color */
+
+tr:nth-child(even) td {
+    background: #F1F1F1;
+}
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */
+
+tr:nth-child(odd) td {
+    background: #FEFEFE;
+}
+tr td:hover {
+    background: #666;
+    color: #FFF;
+}
+
+/* Hover cell effect! */
+    
+.animate-enter, 
+.animate-leave
+{ 
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+} 
+
+.animate-enter.animate-enter-active, 
+.animate-leave {
+    opacity: 1;
+    top: 0;
+    height: 30px;
+}
+
+.animate-leave.animate-leave-active,
+.animate-enter {
+    opacity: 0;
+    top: -50px;
+    height: 0px;
+}
+    
+.container
+{
+    max-height: 800px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+</style>
+
+<div>
+     
+  <div class="container" ng-app="sortApp">
+
+      <table>
+        <thead>
+        <tr style="width:100%">
+            <td>
+          <a href="#">
+            Alarm #
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = '(alarm.alarmDisplay - 0)'; sortReverse = !sortReverse">
+            Time 
+            <span ng-show="sortType == '(alarm.alarmDisplay - 0)' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == '(alarm.alarmDisplay - 0)' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = '(alarm.date - 0)'; sortReverse = !sortReverse">
+          Date of next alarm 
+            <span ng-show="sortType == '(alarm.date - 0)' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == '(alarm.date - 0)' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = '(alarm.date -0)'; sortReverse = !sortReverse">
+            Repeats on
+            <span ng-show="sortType == '(alarm.date -0)' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == '(alarm.date -0)' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = '(alarm.label -0)'; sortReverse = !sortReverse">
+            Label
+            <span ng-show="sortType == '(alarm.label -0)' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == '(alarm.label -0)' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'alarm.enabled'; sortReverse = !sortReverse">
+            Status
+            <span ng-show="sortType == 'alarm.enabled' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'alarm.enabled' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+
+          </tr>
+          </thead>
+          <tbody>
+        <tr ng-repeat="user in msg.options | orderBy:sortType:sortReverse | filter:search track by $index" ng-click="msg.payload = user;send(msg);" style="width:100%" flex>
+                <td><b ng-bind="$index+1"></b></td>
+               <td ng-bind="user.alarm.alarmDisplay"></td>
+               <td ng-bind="user.alarm.date"></td>
+               <td ng-bind="user.alarm.daysofweekDisplay"></td>
+               <td ng-bind="user.alarm.label"></td>
+               <td ng-bind="user.alarm.enabled"></td>
+         </tr>
+        </tbody>
+      </table>
+
+</div>
+</div>
+</body></html>
