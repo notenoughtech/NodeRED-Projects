@@ -5,11 +5,12 @@ var timeout = (flow.get("timeout")) *1000;
 
 // delayed payload
 function inching(){
-    if(alarm === true){
-    msg = {payload: false};
-    context.set("alarmState", false);
-    msg1 = {payload: false, topic: "inching"};
-    node.send([msg, msg1]);
+    let alarm1 = context.get("alarmState");
+    if(alarm1 === true){
+        msg = {payload: false};
+        context.set("alarmState", false);
+        msg1 = {payload: false, topic: "inching"};
+        node.send([msg, msg1]);
     }
 }
 
