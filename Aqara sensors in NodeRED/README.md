@@ -11,6 +11,8 @@ I'm taking all Aqara ZigBee sensors to NodeRED to see what hidden information is
 -   Aqara Leak Sensor (AmazonUS, [AmazonUK](https://amzn.to/3wzHnr1), [AliExpress](https://s.click.aliexpress.com/e/_AqnIfK), [Banggood](https://www.banggood.com/custlink/mKmdjWIDPG))
 -   Aqara PIR with Luminosity ([AmazonUS](https://amzn.to/3rQY6Tr), [AmazonUK](https://amzn.to/2Q225z8), [AliExpress](https://s.click.aliexpress.com/e/_9zYIBS), [Banggood](https://www.banggood.com/custlink/vDDEjpS3ri))
 
+Dashboard:
+![enter image description here](https://notenoughtech.com/wp-content/uploads/2021/05/2021-05-13-21_55_15-Node-RED-Dashboard.jpg)
 
 ## Requirements
 
