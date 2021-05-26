@@ -1,10 +1,7 @@
-![enter image description here](https://notenoughtech.com/wp-content/uploads/2019/09/maxresdefault-17.jpg)
+![enter image description here](https://notenoughtech.com/wp-content/uploads/2021/05/maxresdefault-5.jpg)
 
-We have all been there at some point, leaving washing in the washing machine for longer than required. I decided to fix this with NodeRED. These are Washing Machine Notifications. 
-There is no need to set up anything as the flow measures the power use of the washing machine and activates when the washing starts and resets when the machine has been swiched off.
-
- - [Complete instructions for **Google Home, Android & Windows**](https://notenoughtech.com/home-automation/washing-machine-notifications/)
- - [Complete instructions for **Alexa**](https://notenoughtech.com/home-automation/alexa-is-my-washing-ready/): 
+Turns out the vibration sensors are just not good enough to detect the vibrations of the modern appliances. Power monitoring is the way, and this profile uses the power usage data to detect operational modes and notify you via Android, Alexa, Google Assistant when the cycle is complete.
+ - [Complete Instructions](https://notenoughtech.com/home-automation/smarting-up-comfee-miniplus-dishwasher/)
 
 **Features**:
 
@@ -21,16 +18,15 @@ You will need the following nodes:
 
 and [Join app](https://play.google.com/store/apps/details?id=com.joaomgcd.join&hl=en_GB) for Android notifications 
 
-## You will need **Sonoff POWR2 **buy here:
+## Recommended Relays
+Please check the power consumption of your appliance before picking a relay to stay within its operational limits.
 
- - [Aliexpress](http://s.click.aliexpress.com/e/by4YqwXQ)
- - [Banggood](https://www.banggood.com/custlink/mGmvyM4HC2)
- - [Gearbest](https://www.gearbest.com/smart-home-controls/pp_1829203.html?wid=1433363&lkid=20102743)
- - [AmazonUK](https://amzn.to/2TJRPN6)
- - [AmazonUS](https://amzn.to/2u9E0bs)
- - [Itead store](http://shrsl.com/1i9e8)
-
+ - Sonoff POWR2 [Aliexpress](https://s.click.aliexpress.com/e/_AAkss7)|[AmazonUK](https://amzn.to/2TJRPN6)|[AmazonUS](https://amzn.to/2u9E0bs)|[Itead store](http://shrsl.com/1i9e8)|[Banggood](https://www.banggood.com/custlink/mGmvyM4HC2)
+ - Sonoff Dual R3 (one relay for 2 devices)[Aliexpress](https://s.click.aliexpress.com/e/_9fbgFZ)|[AmazonUK](https://amzn.to/3flRBVp)|[Itead store]([https://shrsl.com/2kvip](https://shrsl.com/2kvip))
+ - Shelly 1PM [AmazonUK](https://amzn.to/3uufKPd)|[AmazonUS](https://amzn.to/3aOdE4S)|[Shelly Store](https://shelly.cloud/products/shelly-1pm-smart-home-automation-relay/)
+ - Shelly 2.5 (one relay for 2 devices) [AmazonUK](https://amzn.to/34h2KRg)|[AmazonUS](https://amzn.to/34nAOLo)|[Shelly Store](https://shop.shelly.cloud/shelly-2.5-ce-ul-wifi-smart-home-automation#54)
+ 
 
 
 # Settings
-See Settings node in the setup menu - each setting had been explained in the comment. Depending on the MQTT message structure, you will need to adjust it to your needs. 
+See Settings node in the setup menu - each setting had been explained in the comment. Depending on the MQTT message structure, you will need to adjust it to your needs.
