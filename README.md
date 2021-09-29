@@ -16,3 +16,5 @@ Current NodeRED related projects are:
  - [Smarter Wall Switch](https://notenoughtech.com/home-automation/creating-a-smarter-light-switch/) (discover why n+1 is the best rule for your smart wall switches)
  - [Sonoff DIY](https://notenoughtech.com/home-automation/is-sonoff-diy-2-0-better/) (how to work with Sonoff DIY mode)
  - [ZigBee Low Battery Warning](https://notenoughtech.com/home-automation/zigbee-low-battery-warning/) (gather battery info from all your ZigBee sensors and get notifications when they get low)
+ - [Daylight Tracking in NodeRED](https://notenoughtech.com/home-automation/nodered-sun-and-time/)
+ -[Aqara E1 Driver in NodeRED](https://notenoughtech.com/home-automation/aqara-roller-shade-driver-e1-zigbee2mqtt/)
