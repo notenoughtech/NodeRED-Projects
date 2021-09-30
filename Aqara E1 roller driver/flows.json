@@ -1,1 +1,1431 @@
-[{"id":"3602cd2ba00d3d39","type":"tab","label":"Aqara Roller Driver E1 in NodeRED","disabled":false,"info":"![enter image description here](https://notenoughtech.com/wp-content/uploads/2021/09/thumbnail-copy-5.jpg)\n\nIt's time to link Aqara E1 driver with Zigbee2MQTT and make it all work with smart assistant and all that.\n\n- [Complete instructions](https://notenoughtech.com/home-automation/aqara-roller-shade-driver-e1--zigbee2mqtt/)  \n\n## Features\n\n- Sunset/Sunrise toggle\n\n- Temperature controls\n- Alexa/Google home integration\n- open to integrations with Android alarms\ncivil/nautical/astronomical daylight features\n\nGet your devices:\n- [Aqara E1](https://notenoughtech.com/home-automation/aqara-roller-shade-driver-e1/)\n- [ZZH Coordinator](https://notenoughtech.com/home-automation/flashing-cc2652r/)\n\n### Settings\nSet Your MQTT device names and edit *Device Name nodes for each instance of the flow.\n\nAdditional resources:\n- node-red-contrib-alexa-home-skill\n- node-red-contrib-smartnora\n- node-red-dashboard\n\nBased on following articles:\n- [Daylight Tracking](https://notenoughtech.com/home-automation/nodered-sun-and-time/)\n- [Alarm Sync](https://notenoughtech.com/tasker/how-to-sync-android-alarm-with-nodered/)\n\n\n#### Feedback\n\n  \n\nIf you have any feedback, please use this [GitHub page](https://github.com/notenoughtech/NodeRED-Projects/tree/master/Aqara%20E1%20roller%20driver) to report it\n\n\n\n## 🔗 Follow my work\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/notenoughtech?label=%40notenoughtech&logo=twitter&style=for-the-badge)](https://twitter.com/NotEnoughTECH) [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC7V__uBIaZotHn_smHJShGQ?label=NotEnoughTech&logo=YouTube&logoColor=red&style=for-the-badge)](https://www.youtube.com/channel/UC7V__uBIaZotHn_smHJShGQ)\n\n[![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/not_enough_tech?logo=reddit&logoColor=white&style=for-the-badge)](https://www.reddit.com/r/Not_Enough_Tech/)\n\n# Support\nAnd if you feeling like buying me a coffee or supporting me in a more continuous way:\n\n  \n\n- [Paypal](https://www.paypal.me/notenoughtech) & [Patreon](https://www.patreon.com/NotEnoughTECH)\n\n  \n\nI hope you have enjoyed the project!"},{"id":"01d6db5a5516d5fc","type":"group","z":"3602cd2ba00d3d39","name":"Get Device Status","style":{"label":true},"nodes":["c2b04b667df8ad32","27fbaa9f3ddd5499","7938db3486ea6614","fb600ae9046d6e05","00c526ee7549a76a","102feb78ef039829","643f7ad819f24d7c"],"x":34,"y":159,"w":682,"h":162},{"id":"0a2a97f32baea540","type":"group","z":"3602cd2ba00d3d39","name":"UI","style":{"stroke":"#000000","fill":"#e3f3d3","label":true,"label-position":"n","color":"#000000"},"nodes":["6401c3b3dbe0249a","c7a54fd6feb0216b","3e984c954ba04f76","373e875891c7ebb6","8e96be4678eae67f","a6afaa49c9425908","ee3b6d6cd75abc6f","6ae101329239d563","e71b760c61af33c7","cf3cb6ca6190901d","3dd712f19e361d9a","7278b6028c8f60db","519397a7c1e7a1c5","4253e1a800c58d53","cd9c21fd60410d03","be40bedf980cd536","85cf94ae6f6e4042","0507064cee6e98eb"],"x":894,"y":319,"w":952,"h":362},{"id":"8d695ddae7b68fcf","type":"group","z":"3602cd2ba00d3d39","name":"Controls","style":{"fill":"#bfdbef","label":true,"label-position":"n"},"nodes":["5188303b9860b794","009b1cd5051f2861","2d052e867b3df05c","88f18668bcc638cf","fe43c6efbe013744"],"x":28,"y":353,"w":758,"h":514},{"id":"fe43c6efbe013744","type":"group","z":"3602cd2ba00d3d39","g":"8d695ddae7b68fcf","name":"Open","style":{"fill":"#addb7b","label":true,"label-position":"n","color":"#000000"},"nodes":["3771bb85051d71d5","79b2a2d45bb18db3"],"x":54,"y":379,"w":232,"h":122},{"id":"88f18668bcc638cf","type":"group","z":"3602cd2ba00d3d39","g":"8d695ddae7b68fcf","name":"Close","style":{"fill":"#ffcf3f","label":true,"label-position":"n","color":"#000000"},"nodes":["16174cf907d90925","3b27d62390ace1c7"],"x":54,"y":519,"w":232,"h":122},{"id":"009b1cd5051f2861","type":"group","z":"3602cd2ba00d3d39","g":"8d695ddae7b68fcf","name":"Stop Motion","style":{"fill":"#ff3f3f","label":true,"label-position":"n","color":"#ffffff"},"nodes":["8952d7fd34a358f2"],"x":54,"y":659,"w":232,"h":82},{"id":"2d052e867b3df05c","type":"group","z":"3602cd2ba00d3d39","g":"8d695ddae7b68fcf","name":"Set position","style":{"fill":"#b797cf","label":true,"label-position":"n","color":"#ffffff"},"nodes":["92a1984143df9e50"],"x":54,"y":759,"w":232,"h":82},{"id":"9716900d331881d3","type":"group","z":"3602cd2ba00d3d39","name":"Voice assistant","style":{"stroke":"#6f2fa0","fill":"#bfc7d7","label":true,"color":"#000000"},"nodes":["504e1354fc6a8335","731f4ad7a0f98ead","77c42fe742a98d54","82f00eaf0b9d7fe4","93a1e6e0655c679d","13b1a0d8fd6e9c8f","b8b6f5c1026f91af"],"x":894,"y":139,"w":542,"h":162},{"id":"d4e67e4e5ecc9795","type":"group","z":"3602cd2ba00d3d39","name":"Daylight and Temp mode (optional)","style":{"label":true},"nodes":["88490c91db8f1b27","4a9dafc4902b7752","48d20a53827cc622","0f5525750fff86ec","9bebb9fec621d63a","8bc9e3783e6295ee","8be1e3914ea3dbb8","ec2cf4306567cdaa","97e7c3c67911da10","abf95b5779d54776"],"x":894,"y":739,"w":762,"h":282},{"id":"c2b04b667df8ad32","type":"mqtt in","z":"3602cd2ba00d3d39","g":"01d6db5a5516d5fc","name":"Aqara E1","topic":"zigbee2mqtt/AqaraE1","qos":"0","datatype":"json","broker":"a86137c05ab2f4f5","nl":false,"rap":true,"rh":0,"x":140,"y":240,"wires":[["00c526ee7549a76a"]]},{"id":"5188303b9860b794","type":"mqtt out","z":"3602cd2ba00d3d39","g":"8d695ddae7b68fcf","name":"Aqara E1","topic":"zigbee2mqtt/AqaraE1/set","qos":"0","retain":"","respTopic":"","contentType":"","userProps":"","correl":"","expiry":"","broker":"a86137c05ab2f4f5","x":700,"y":580,"wires":[]},{"id":"3771bb85051d71d5","type":"inject","z":"3602cd2ba00d3d39","g":"fe43c6efbe013744","name":"","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"state\": \"on\"}","payloadType":"json","x":170,"y":420,"wires":[["5188303b9860b794"]]},{"id":"16174cf907d90925","type":"inject","z":"3602cd2ba00d3d39","g":"88f18668bcc638cf","name":"","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"state\": \"off\"}","payloadType":"json","x":170,"y":560,"wires":[["5188303b9860b794"]]},{"id":"79b2a2d45bb18db3","type":"inject","z":"3602cd2ba00d3d39","g":"fe43c6efbe013744","name":"","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"state\": \"open\"}","payloadType":"json","x":180,"y":460,"wires":[["5188303b9860b794"]]},{"id":"3b27d62390ace1c7","type":"inject","z":"3602cd2ba00d3d39","g":"88f18668bcc638cf","name":"","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"state\": \"close\"}","payloadType":"json","x":180,"y":600,"wires":[["5188303b9860b794"]]},{"id":"8952d7fd34a358f2","type":"inject","z":"3602cd2ba00d3d39","g":"009b1cd5051f2861","name":"","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"state\": \"stop\"}","payloadType":"json","x":180,"y":700,"wires":[["5188303b9860b794"]]},{"id":"92a1984143df9e50","type":"inject","z":"3602cd2ba00d3d39","g":"2d052e867b3df05c","name":"","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"position\": 20}","payloadType":"json","x":180,"y":800,"wires":[["5188303b9860b794"]]},{"id":"27fbaa9f3ddd5499","type":"mqtt out","z":"3602cd2ba00d3d39","g":"01d6db5a5516d5fc","name":"Aqara E1","topic":"zigbee2mqtt/AqaraE1/get","qos":"0","retain":"","respTopic":"","contentType":"","userProps":"","correl":"","expiry":"","broker":"a86137c05ab2f4f5","x":340,"y":200,"wires":[]},{"id":"7938db3486ea6614","type":"inject","z":"3602cd2ba00d3d39","g":"01d6db5a5516d5fc","name":"","props":[{"p":"payload"}],"repeat":"10","crontab":"","once":true,"onceDelay":0.1,"topic":"","payload":"{\"state\": \"\"}","payloadType":"json","x":150,"y":200,"wires":[["27fbaa9f3ddd5499"]]},{"id":"fb600ae9046d6e05","type":"function","z":"3602cd2ba00d3d39","g":"01d6db5a5516d5fc","name":"Save device","func":"var name = msg.name;\n\nvar data = flow.get(name);\nif(data === undefined){\n    data = {\n        \"linkquality\" : null,\n        \"position\" : null,\n    };\n    flow.set(name, data);\n}\n\ndata = {\n    \"linkquality\" : msg.payload.linkquality,\n    \"position\" : msg.payload.position,\n}\nflow.set(name, data);\nmsg.payload = msg.payload.position;\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":570,"y":240,"wires":[["643f7ad819f24d7c"]]},{"id":"00c526ee7549a76a","type":"change","z":"3602cd2ba00d3d39","g":"01d6db5a5516d5fc","name":"Name Device*","rules":[{"t":"set","p":"name","pt":"msg","to":"AqaraE1","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":360,"y":240,"wires":[["fb600ae9046d6e05","102feb78ef039829"]]},{"id":"6401c3b3dbe0249a","type":"ui_slider","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"","label":"Office Blinds","tooltip":"","group":"df1a65160e98eb19","order":7,"width":6,"height":1,"passthru":false,"outs":"end","topic":"control","topicType":"str","min":0,"max":"100","step":"10","x":1050,"y":560,"wires":[["7278b6028c8f60db"]]},{"id":"c7a54fd6feb0216b","type":"ui_text","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","group":"df1a65160e98eb19","order":1,"width":5,"height":1,"name":"Aqara E1","label":"<b>Aqara E1</b>","format":"{{msg.payload}}","layout":"row-center","x":1200,"y":400,"wires":[]},{"id":"3e984c954ba04f76","type":"ui_template","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","group":"df1a65160e98eb19","name":"Picture","order":3,"width":3,"height":3,"format":"<div>\n    \n    <img src=\"{{msg.payload}}\" alt=\"Aqara T1\" style=\"width:130px;height:130px; padding:0px 0px 0px 25px;\">\n    \n</div>","storeOutMessages":true,"fwdInMessages":true,"resendOnRefresh":true,"templateScope":"local","x":1200,"y":360,"wires":[[]]},{"id":"373e875891c7ebb6","type":"ui_template","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","group":"df1a65160e98eb19","name":"Range Icon","order":2,"width":1,"height":1,"format":"<ng-md-icon icon={{msg.icon}} style={{msg.colour}} size=\"25\"></ng-md-icon>","storeOutMessages":true,"fwdInMessages":true,"resendOnRefresh":true,"templateScope":"local","x":1230,"y":600,"wires":[[]]},{"id":"8e96be4678eae67f","type":"inject","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":true,"onceDelay":0.1,"topic":"","payload":"https://cdn3.iconfinder.com/data/icons/tools-solid-icons-vol-3/72/121-512.png","payloadType":"str","x":1010,"y":360,"wires":[["3e984c954ba04f76"]]},{"id":"a6afaa49c9425908","type":"function","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"Range Format","func":"var range = msg.payload.linkquality;\n\n\n\n//strong  130+\nif(range >= 130){\n    msg.icon = \"signal_wifi_3_bar\";\n    msg.colour = \"fill: green\";\n}\n//good 90-129\nif(range >= 90 && range < 130){\n    msg.icon = \"signal_wifi_2_bar\";\n    msg.colour = \"fill: blue\";\n}\n//medium  50-89\nif(range >= 50 && range < 90){\n    msg.icon = \"signal_wifi_1_bar\";\n    msg.colour = \"fill: orange\";\n}\n//low  below <49\nif(range < 50){\n    msg.icon = \"signal_wifi_0_bar\";\n    msg.colour = \"fill: red\";\n}\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":1060,"y":600,"wires":[["373e875891c7ebb6"]]},{"id":"ee3b6d6cd75abc6f","type":"ui_button","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"Open","group":"df1a65160e98eb19","order":8,"width":2,"height":1,"passthru":false,"label":"Open","tooltip":"Open Blinds","color":"","bgcolor":"{{msg.colour}}","icon":"fa-arrow-up","payload":"{\"state\": \"open\"}","payloadType":"json","topic":"topic","topicType":"msg","x":1190,"y":440,"wires":[["cf3cb6ca6190901d","519397a7c1e7a1c5"]]},{"id":"6ae101329239d563","type":"ui_button","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"Close","group":"df1a65160e98eb19","order":10,"width":2,"height":1,"passthru":false,"label":"Close","tooltip":"Close Blinds","color":"","bgcolor":"","icon":"fa-arrow-down","payload":"{\"state\": \"close\"}","payloadType":"json","topic":"topic","topicType":"msg","x":1190,"y":520,"wires":[["cf3cb6ca6190901d","519397a7c1e7a1c5"]]},{"id":"e71b760c61af33c7","type":"ui_button","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"Stop","group":"df1a65160e98eb19","order":9,"width":2,"height":1,"passthru":false,"label":"Stop","tooltip":"Pause action","color":"","bgcolor":"","icon":"","payload":"{\"state\": \"stop\"}","payloadType":"json","topic":"topic","topicType":"msg","x":1190,"y":480,"wires":[["cf3cb6ca6190901d","519397a7c1e7a1c5"]]},{"id":"cf3cb6ca6190901d","type":"mqtt out","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"Aqara E1","topic":"zigbee2mqtt/AqaraE1/set","qos":"0","retain":"","respTopic":"","contentType":"","userProps":"","correl":"","expiry":"","broker":"a86137c05ab2f4f5","x":1600,"y":560,"wires":[]},{"id":"3dd712f19e361d9a","type":"function","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"","func":"var data = flow.get(msg.name);\nif(msg.topic === \"control\"){\n    var value = msg.payload;\n    msg.payload = {\"position\": value};\n    data = {\"linkquality\":data.linkquality,\"position\": value}\n    flow.set(msg.name, data);\n    return msg;\n}\n","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":1420,"y":560,"wires":[["cf3cb6ca6190901d"]]},{"id":"7278b6028c8f60db","type":"change","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"Name Device*","rules":[{"t":"set","p":"name","pt":"msg","to":"AqaraE1","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":1240,"y":560,"wires":[["3dd712f19e361d9a"]]},{"id":"519397a7c1e7a1c5","type":"function","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"Update","func":"msg.payload = {\"state\" : \"\"};\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":1460,"y":440,"wires":[["4253e1a800c58d53"]]},{"id":"4253e1a800c58d53","type":"mqtt out","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"Aqara E1","topic":"zigbee2mqtt/AqaraE1/get","qos":"0","retain":"","respTopic":"","contentType":"","userProps":"","correl":"","expiry":"","broker":"a86137c05ab2f4f5","x":1760,"y":440,"wires":[]},{"id":"504e1354fc6a8335","type":"alexa-home","z":"3602cd2ba00d3d39","g":"9716900d331881d3","conf":"241b578d.91d228","device":"154082","acknoledge":true,"name":"Office Window","topic":"","x":990,"y":240,"wires":[["731f4ad7a0f98ead"]]},{"id":"731f4ad7a0f98ead","type":"function","z":"3602cd2ba00d3d39","g":"9716900d331881d3","name":"Format response","func":"var command = msg.payload;\n\nif(command === true){msg.payload = {\"state\": \"open\"}; return [msg, null];}\nif(command === false){msg.payload = {\"state\": \"close\"}; return [msg, null];}\n\nelse{\n    msg.payload = {\"position\" : msg.payload};\n    return [null, msg];\n}\n\n","outputs":2,"noerr":0,"initialize":"","finalize":"","libs":[],"x":1210,"y":240,"wires":[["13b1a0d8fd6e9c8f"],["b8b6f5c1026f91af"]]},{"id":"77c42fe742a98d54","type":"noraf-blinds","z":"3602cd2ba00d3d39","g":"9716900d331881d3","devicename":"Blinds","roomhint":"Office","name":"","passthru":false,"invert":false,"nora":"9022313b.c75f1","topic":"","twofactor":"off","twofactorpin":"","filter":false,"x":970,"y":180,"wires":[["82f00eaf0b9d7fe4"]]},{"id":"82f00eaf0b9d7fe4","type":"function","z":"3602cd2ba00d3d39","g":"9716900d331881d3","name":"Format response","func":"var command = msg.payload;\nmsg.payload = {\"position\" : command.openPercent};\nreturn msg;\n\n\n","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":1210,"y":180,"wires":[["93a1e6e0655c679d"]]},{"id":"93a1e6e0655c679d","type":"link out","z":"3602cd2ba00d3d39","g":"9716900d331881d3","name":"","links":["cd9c21fd60410d03","be40bedf980cd536"],"x":1395,"y":180,"wires":[]},{"id":"13b1a0d8fd6e9c8f","type":"link out","z":"3602cd2ba00d3d39","g":"9716900d331881d3","name":"","links":["be40bedf980cd536","cd9c21fd60410d03"],"x":1395,"y":220,"wires":[]},{"id":"b8b6f5c1026f91af","type":"link out","z":"3602cd2ba00d3d39","g":"9716900d331881d3","name":"","links":["be40bedf980cd536","cd9c21fd60410d03"],"x":1395,"y":260,"wires":[]},{"id":"cd9c21fd60410d03","type":"link in","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"","links":["93a1e6e0655c679d","13b1a0d8fd6e9c8f","b8b6f5c1026f91af"],"x":1375,"y":400,"wires":[["519397a7c1e7a1c5"]]},{"id":"be40bedf980cd536","type":"link in","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"","links":["93a1e6e0655c679d","13b1a0d8fd6e9c8f","b8b6f5c1026f91af"],"x":1515,"y":640,"wires":[["cf3cb6ca6190901d"]]},{"id":"85cf94ae6f6e4042","type":"link in","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"","links":["102feb78ef039829"],"x":935,"y":620,"wires":[["a6afaa49c9425908"]]},{"id":"0507064cee6e98eb","type":"link in","z":"3602cd2ba00d3d39","g":"0a2a97f32baea540","name":"","links":["643f7ad819f24d7c"],"x":935,"y":540,"wires":[["6401c3b3dbe0249a"]]},{"id":"102feb78ef039829","type":"link out","z":"3602cd2ba00d3d39","g":"01d6db5a5516d5fc","name":"","links":["85cf94ae6f6e4042"],"x":475,"y":280,"wires":[]},{"id":"643f7ad819f24d7c","type":"link out","z":"3602cd2ba00d3d39","g":"01d6db5a5516d5fc","name":"","links":["0507064cee6e98eb"],"x":675,"y":240,"wires":[]},{"id":"88490c91db8f1b27","type":"ui_switch","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"","label":"Daylight Mode","tooltip":"Open at sunrise, Close at sunset","group":"df1a65160e98eb19","order":11,"width":0,"height":0,"passthru":true,"decouple":"false","topic":"topic","topicType":"msg","style":"","onvalue":"true","onvalueType":"bool","onicon":"fa-sun-o","oncolor":"green","offvalue":"false","offvalueType":"bool","officon":"fa-sun-o","offcolor":"grey","animate":true,"x":1040,"y":860,"wires":[["abf95b5779d54776"]]},{"id":"4a9dafc4902b7752","type":"inject","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"60","crontab":"","once":false,"onceDelay":0.1,"topic":"","payloadType":"date","x":1010,"y":780,"wires":[["48d20a53827cc622"]]},{"id":"48d20a53827cc622","type":"switch","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"is Enabled","property":"daylight_mode","propertyType":"flow","rules":[{"t":"true"}],"checkall":"true","repair":false,"outputs":1,"x":1210,"y":780,"wires":[["0f5525750fff86ec"]]},{"id":"0f5525750fff86ec","type":"function","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"Daylight behaviour","func":"var daylight = global.get(\"time_of_Day\"); \n\n\n\n\n//required to set the toggle once\nvar context_day = context.get(\"day\");\nvar context_night = context.get(\"night\");\n\n\n// night behaviour\nif(daylight === \"night\" && context_night === false){\n    msg.payload = {\"state\" : \"close\"};\n    context.set(\"night\", true);\n    context.set(\"day\", false);\n    return msg;\n}\n\n// day behaviour\nif(daylight === \"day\" && context_day === false){\n    msg.payload = {\"state\" : \"open\"}\n    context.set(\"day\", true);\n    context.set(\"night\", false);\n    return msg;\n}\n\n//to disable temperature mode set \"disable in onStart tab\"\n\nvar temp_mode = flow.get(\"temp_mode\");\nvar temp = 22 // ie. flow.get(\"temp_office\"); or however the timer is reporting\nvar setpoint = flow.get(\"setpoint\");\n\n\n//too hot during the day\nif(temp_mode === \"hot\"){\n    if(temp >= setpoint && daylight === \"day\"){\n        msg.payload = {\"state\" : \"close\"};\n        return msg;\n    }\n}\n\n//too cold during the day\nif(temp_mode === \"hot\"){\n  if(temp < setpoint && daylight === \"day\"){\n        msg.payload = {\"state\" : \"open\"};\n        return msg;\n    }  \n}","outputs":1,"noerr":0,"initialize":"// Code added here will be run once\n// whenever the node is started.\ncontext.set(\"day\", false);\ncontext.set(\"night\", false);\n\nflow.set(\"temp_mode\", \"disabled\");  //disabled by default","finalize":"","libs":[],"x":1410,"y":780,"wires":[["9bebb9fec621d63a"]]},{"id":"9bebb9fec621d63a","type":"link out","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"","links":[],"x":1615,"y":780,"wires":[]},{"id":"8bc9e3783e6295ee","type":"ui_switch","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"","label":"Temperature mode","tooltip":"Close when too hot (red), close when cold (blue)","group":"df1a65160e98eb19","order":12,"width":0,"height":0,"passthru":true,"decouple":"false","topic":"UI","topicType":"str","style":"","onvalue":"hot","onvalueType":"str","onicon":"fa-thermometer-empty","oncolor":"red","offvalue":"cold","offvalueType":"str","officon":"fa-thermometer-empty","offcolor":"blue","animate":true,"x":1050,"y":980,"wires":[["8be1e3914ea3dbb8"]]},{"id":"8be1e3914ea3dbb8","type":"change","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"","rules":[{"t":"set","p":"temp_mode","pt":"flow","to":"payload","tot":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":1300,"y":980,"wires":[[]]},{"id":"ec2cf4306567cdaa","type":"ui_slider","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"","label":"Setpoint","tooltip":"Set setpoint temp for blinds","group":"df1a65160e98eb19","order":13,"width":0,"height":0,"passthru":true,"outs":"end","topic":"topic","topicType":"msg","min":"10","max":"30","step":1,"x":1020,"y":920,"wires":[["97e7c3c67911da10"]]},{"id":"97e7c3c67911da10","type":"change","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"","rules":[{"t":"set","p":"setpoint","pt":"flow","to":"payload","tot":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":1280,"y":920,"wires":[[]]},{"id":"abf95b5779d54776","type":"change","z":"3602cd2ba00d3d39","g":"d4e67e4e5ecc9795","name":"","rules":[{"t":"set","p":"daylight_mode","pt":"flow","to":"payload","tot":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":1300,"y":860,"wires":[[]]},{"id":"ba3e26b30f659d1c","type":"ui_spacer","z":"3602cd2ba00d3d39","name":"spacer","group":"df1a65160e98eb19","order":4,"width":3,"height":1},{"id":"80ac1df10605574f","type":"ui_spacer","z":"3602cd2ba00d3d39","name":"spacer","group":"df1a65160e98eb19","order":5,"width":3,"height":1},{"id":"8fd7fc0d46c25843","type":"ui_spacer","z":"3602cd2ba00d3d39","name":"spacer","group":"df1a65160e98eb19","order":6,"width":3,"height":1},{"id":"a86137c05ab2f4f5","type":"mqtt-broker","name":"Default","broker":"localhost","port":"1883","clientid":"","usetls":false,"protocolVersion":"4","keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthPayload":"","birthMsg":{},"closeTopic":"","closeQos":"0","closePayload":"","closeMsg":{},"willTopic":"","willQos":"0","willPayload":"","willMsg":{},"sessionExpiry":""},{"id":"df1a65160e98eb19","type":"ui_group","name":"Aqara Controls","tab":"841947fdb5496cc1","order":2,"disp":true,"width":6,"collapse":false},{"id":"241b578d.91d228","type":"alexa-home-conf","username":"quintaar"},{"id":"9022313b.c75f1","type":"noraf-config","name":"Google Home","group":"","twofactor":"off","twofactorpin":"","localexecution":true,"structure":"Home"},{"id":"841947fdb5496cc1","type":"ui_tab","name":"Home","icon":"dashboard","disabled":false,"hidden":false}]
+[
+    {
+        "id": "3602cd2ba00d3d39",
+        "type": "tab",
+        "label": "Aqara Roller Driver E1 in NodeRED",
+        "disabled": false,
+        "info": "![enter image description here](https://notenoughtech.com/wp-content/uploads/2021/09/thumbnail-copy-5.jpg)\n\nIt's time to link Aqara E1 driver with Zigbee2MQTT and make it all work with smart assistant and all that.\n\n- [Complete instructions](https://notenoughtech.com/home-automation/aqara-roller-shade-driver-e1--zigbee2mqtt/)  \n\n## Features\n\n- Sunset/Sunrise toggle\n\n- Temperature controls\n- Alexa/Google home integration\n- open to integrations with Android alarms\ncivil/nautical/astronomical daylight features\n\nGet your devices:\n- [Aqara E1](https://notenoughtech.com/home-automation/aqara-roller-shade-driver-e1/)\n- [ZZH Coordinator](https://notenoughtech.com/home-automation/flashing-cc2652r/)\n\n### Settings\nSet Your MQTT device names and edit *Device Name nodes for each instance of the flow.\n\nAdditional resources:\n- node-red-contrib-alexa-home-skill\n- node-red-contrib-smartnora\n- node-red-dashboard\n\nBased on following articles:\n- [Daylight Tracking](https://notenoughtech.com/home-automation/nodered-sun-and-time/)\n- [Alarm Sync](https://notenoughtech.com/tasker/how-to-sync-android-alarm-with-nodered/)\n\n\n#### Feedback\n\n  \n\nIf you have any feedback, please use this [GitHub page](https://github.com/notenoughtech/NodeRED-Projects/tree/master/Aqara%20E1%20roller%20driver) to report it\n\n\n\n## 🔗 Follow my work\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/notenoughtech?label=%40notenoughtech&logo=twitter&style=for-the-badge)](https://twitter.com/NotEnoughTECH) [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC7V__uBIaZotHn_smHJShGQ?label=NotEnoughTech&logo=YouTube&logoColor=red&style=for-the-badge)](https://www.youtube.com/channel/UC7V__uBIaZotHn_smHJShGQ)\n\n[![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/not_enough_tech?logo=reddit&logoColor=white&style=for-the-badge)](https://www.reddit.com/r/Not_Enough_Tech/)\n\n# Support\nAnd if you feeling like buying me a coffee or supporting me in a more continuous way:\n\n  \n\n- [Paypal](https://www.paypal.me/notenoughtech) & [Patreon](https://www.patreon.com/NotEnoughTECH)\n\n  \n\nI hope you have enjoyed the project!"
+    },
+    {
+        "id": "01d6db5a5516d5fc",
+        "type": "group",
+        "z": "3602cd2ba00d3d39",
+        "name": "Get Device Status",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c2b04b667df8ad32",
+            "27fbaa9f3ddd5499",
+            "7938db3486ea6614",
+            "fb600ae9046d6e05",
+            "00c526ee7549a76a",
+            "102feb78ef039829",
+            "643f7ad819f24d7c"
+        ],
+        "x": 34,
+        "y": 159,
+        "w": 682,
+        "h": 162
+    },
+    {
+        "id": "0a2a97f32baea540",
+        "type": "group",
+        "z": "3602cd2ba00d3d39",
+        "name": "UI",
+        "style": {
+            "stroke": "#000000",
+            "fill": "#e3f3d3",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "6401c3b3dbe0249a",
+            "c7a54fd6feb0216b",
+            "3e984c954ba04f76",
+            "373e875891c7ebb6",
+            "8e96be4678eae67f",
+            "a6afaa49c9425908",
+            "ee3b6d6cd75abc6f",
+            "6ae101329239d563",
+            "e71b760c61af33c7",
+            "cf3cb6ca6190901d",
+            "3dd712f19e361d9a",
+            "7278b6028c8f60db",
+            "519397a7c1e7a1c5",
+            "4253e1a800c58d53",
+            "cd9c21fd60410d03",
+            "be40bedf980cd536",
+            "85cf94ae6f6e4042",
+            "0507064cee6e98eb"
+        ],
+        "x": 894,
+        "y": 319,
+        "w": 952,
+        "h": 362
+    },
+    {
+        "id": "8d695ddae7b68fcf",
+        "type": "group",
+        "z": "3602cd2ba00d3d39",
+        "name": "Controls",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n"
+        },
+        "nodes": [
+            "5188303b9860b794",
+            "009b1cd5051f2861",
+            "2d052e867b3df05c",
+            "88f18668bcc638cf",
+            "fe43c6efbe013744"
+        ],
+        "x": 28,
+        "y": 353,
+        "w": 758,
+        "h": 514
+    },
+    {
+        "id": "fe43c6efbe013744",
+        "type": "group",
+        "z": "3602cd2ba00d3d39",
+        "g": "8d695ddae7b68fcf",
+        "name": "Open",
+        "style": {
+            "fill": "#addb7b",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "3771bb85051d71d5",
+            "79b2a2d45bb18db3"
+        ],
+        "x": 54,
+        "y": 379,
+        "w": 232,
+        "h": 122
+    },
+    {
+        "id": "88f18668bcc638cf",
+        "type": "group",
+        "z": "3602cd2ba00d3d39",
+        "g": "8d695ddae7b68fcf",
+        "name": "Close",
+        "style": {
+            "fill": "#ffcf3f",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "16174cf907d90925",
+            "3b27d62390ace1c7"
+        ],
+        "x": 54,
+        "y": 519,
+        "w": 232,
+        "h": 122
+    },
+    {
+        "id": "009b1cd5051f2861",
+        "type": "group",
+        "z": "3602cd2ba00d3d39",
+        "g": "8d695ddae7b68fcf",
+        "name": "Stop Motion",
+        "style": {
+            "fill": "#ff3f3f",
+            "label": true,
+            "label-position": "n",
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "8952d7fd34a358f2"
+        ],
+        "x": 54,
+        "y": 659,
+        "w": 232,
+        "h": 82
+    },
+    {
+        "id": "2d052e867b3df05c",
+        "type": "group",
+        "z": "3602cd2ba00d3d39",
+        "g": "8d695ddae7b68fcf",
+        "name": "Set position",
+        "style": {
+            "fill": "#b797cf",
+            "label": true,
+            "label-position": "n",
+            "color": "#ffffff"
+        },
+        "nodes": [
+            "92a1984143df9e50"
+        ],
+        "x": 54,
+        "y": 759,
+        "w": 232,
+        "h": 82
+    },
+    {
+        "id": "9716900d331881d3",
+        "type": "group",
+        "z": "3602cd2ba00d3d39",
+        "name": "Voice assistant",
+        "style": {
+            "stroke": "#6f2fa0",
+            "fill": "#bfc7d7",
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "504e1354fc6a8335",
+            "731f4ad7a0f98ead",
+            "77c42fe742a98d54",
+            "82f00eaf0b9d7fe4",
+            "93a1e6e0655c679d",
+            "13b1a0d8fd6e9c8f",
+            "b8b6f5c1026f91af"
+        ],
+        "x": 894,
+        "y": 139,
+        "w": 542,
+        "h": 162
+    },
+    {
+        "id": "d4e67e4e5ecc9795",
+        "type": "group",
+        "z": "3602cd2ba00d3d39",
+        "name": "Daylight and Temp mode (optional)",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "88490c91db8f1b27",
+            "4a9dafc4902b7752",
+            "48d20a53827cc622",
+            "0f5525750fff86ec",
+            "9bebb9fec621d63a",
+            "8bc9e3783e6295ee",
+            "8be1e3914ea3dbb8",
+            "ec2cf4306567cdaa",
+            "97e7c3c67911da10",
+            "abf95b5779d54776"
+        ],
+        "x": 894,
+        "y": 739,
+        "w": 762,
+        "h": 282
+    },
+    {
+        "id": "c2b04b667df8ad32",
+        "type": "mqtt in",
+        "z": "3602cd2ba00d3d39",
+        "g": "01d6db5a5516d5fc",
+        "name": "Aqara E1",
+        "topic": "zigbee2mqtt/AqaraE1",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "a86137c05ab2f4f5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "00c526ee7549a76a"
+            ]
+        ]
+    },
+    {
+        "id": "5188303b9860b794",
+        "type": "mqtt out",
+        "z": "3602cd2ba00d3d39",
+        "g": "8d695ddae7b68fcf",
+        "name": "Aqara E1",
+        "topic": "zigbee2mqtt/AqaraE1/set",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a86137c05ab2f4f5",
+        "x": 700,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "3771bb85051d71d5",
+        "type": "inject",
+        "z": "3602cd2ba00d3d39",
+        "g": "fe43c6efbe013744",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"state\": \"on\"}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "5188303b9860b794"
+            ]
+        ]
+    },
+    {
+        "id": "16174cf907d90925",
+        "type": "inject",
+        "z": "3602cd2ba00d3d39",
+        "g": "88f18668bcc638cf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"state\": \"off\"}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 560,
+        "wires": [
+            [
+                "5188303b9860b794"
+            ]
+        ]
+    },
+    {
+        "id": "79b2a2d45bb18db3",
+        "type": "inject",
+        "z": "3602cd2ba00d3d39",
+        "g": "fe43c6efbe013744",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"state\": \"open\"}",
+        "payloadType": "json",
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "5188303b9860b794"
+            ]
+        ]
+    },
+    {
+        "id": "3b27d62390ace1c7",
+        "type": "inject",
+        "z": "3602cd2ba00d3d39",
+        "g": "88f18668bcc638cf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"state\": \"close\"}",
+        "payloadType": "json",
+        "x": 180,
+        "y": 600,
+        "wires": [
+            [
+                "5188303b9860b794"
+            ]
+        ]
+    },
+    {
+        "id": "8952d7fd34a358f2",
+        "type": "inject",
+        "z": "3602cd2ba00d3d39",
+        "g": "009b1cd5051f2861",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"state\": \"stop\"}",
+        "payloadType": "json",
+        "x": 180,
+        "y": 700,
+        "wires": [
+            [
+                "5188303b9860b794"
+            ]
+        ]
+    },
+    {
+        "id": "92a1984143df9e50",
+        "type": "inject",
+        "z": "3602cd2ba00d3d39",
+        "g": "2d052e867b3df05c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"position\": 20}",
+        "payloadType": "json",
+        "x": 180,
+        "y": 800,
+        "wires": [
+            [
+                "5188303b9860b794"
+            ]
+        ]
+    },
+    {
+        "id": "27fbaa9f3ddd5499",
+        "type": "mqtt out",
+        "z": "3602cd2ba00d3d39",
+        "g": "01d6db5a5516d5fc",
+        "name": "Aqara E1",
+        "topic": "zigbee2mqtt/AqaraE1/get",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a86137c05ab2f4f5",
+        "x": 340,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7938db3486ea6614",
+        "type": "inject",
+        "z": "3602cd2ba00d3d39",
+        "g": "01d6db5a5516d5fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"state\": \"\"}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "27fbaa9f3ddd5499"
+            ]
+        ]
+    },
+    {
+        "id": "fb600ae9046d6e05",
+        "type": "function",
+        "z": "3602cd2ba00d3d39",
+        "g": "01d6db5a5516d5fc",
+        "name": "Save device",
+        "func": "var name = msg.name;\n\nvar data = flow.get(name);\nif(data === undefined){\n    data = {\n        \"linkquality\" : null,\n        \"position\" : null,\n    };\n    flow.set(name, data);\n}\n\ndata = {\n    \"linkquality\" : msg.payload.linkquality,\n    \"position\" : msg.payload.position,\n}\nflow.set(name, data);\nmsg.payload = msg.payload.position;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [
+                "643f7ad819f24d7c"
+            ]
+        ]
+    },
+    {
+        "id": "00c526ee7549a76a",
+        "type": "change",
+        "z": "3602cd2ba00d3d39",
+        "g": "01d6db5a5516d5fc",
+        "name": "Name Device*",
+        "rules": [
+            {
+                "t": "set",
+                "p": "name",
+                "pt": "msg",
+                "to": "AqaraE1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "fb600ae9046d6e05",
+                "102feb78ef039829",
+                "d83829d83be9eee2"
+            ]
+        ]
+    },
+    {
+        "id": "6401c3b3dbe0249a",
+        "type": "ui_slider",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "",
+        "label": "Office Blinds",
+        "tooltip": "",
+        "group": "df1a65160e98eb19",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "outs": "end",
+        "topic": "control",
+        "topicType": "str",
+        "min": 0,
+        "max": "100",
+        "step": "10",
+        "x": 1050,
+        "y": 560,
+        "wires": [
+            [
+                "7278b6028c8f60db"
+            ]
+        ]
+    },
+    {
+        "id": "c7a54fd6feb0216b",
+        "type": "ui_text",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "group": "df1a65160e98eb19",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "name": "Aqara E1",
+        "label": "<b>Aqara E1</b>",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "x": 1200,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3e984c954ba04f76",
+        "type": "ui_template",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "group": "df1a65160e98eb19",
+        "name": "Picture",
+        "order": 3,
+        "width": 3,
+        "height": 3,
+        "format": "<div>\n    \n    <img src=\"{{msg.payload}}\" alt=\"Aqara T1\" style=\"width:130px;height:130px; padding:0px 0px 0px 25px;\">\n    \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1200,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "373e875891c7ebb6",
+        "type": "ui_template",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "group": "df1a65160e98eb19",
+        "name": "Range Icon",
+        "order": 2,
+        "width": 1,
+        "height": 1,
+        "format": "<ng-md-icon icon={{msg.icon}} style={{msg.colour}} size=\"25\"></ng-md-icon>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 1230,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e96be4678eae67f",
+        "type": "inject",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "https://cdn3.iconfinder.com/data/icons/tools-solid-icons-vol-3/72/121-512.png",
+        "payloadType": "str",
+        "x": 1010,
+        "y": 360,
+        "wires": [
+            [
+                "3e984c954ba04f76"
+            ]
+        ]
+    },
+    {
+        "id": "a6afaa49c9425908",
+        "type": "function",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "Range Format",
+        "func": "var range = msg.payload.linkquality;\n\n\n\n//strong  130+\nif(range >= 130){\n    msg.icon = \"signal_wifi_3_bar\";\n    msg.colour = \"fill: green\";\n}\n//good 90-129\nif(range >= 90 && range < 130){\n    msg.icon = \"signal_wifi_2_bar\";\n    msg.colour = \"fill: blue\";\n}\n//medium  50-89\nif(range >= 50 && range < 90){\n    msg.icon = \"signal_wifi_1_bar\";\n    msg.colour = \"fill: orange\";\n}\n//low  below <49\nif(range < 50){\n    msg.icon = \"signal_wifi_0_bar\";\n    msg.colour = \"fill: red\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 600,
+        "wires": [
+            [
+                "373e875891c7ebb6"
+            ]
+        ]
+    },
+    {
+        "id": "ee3b6d6cd75abc6f",
+        "type": "ui_button",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "Open",
+        "group": "df1a65160e98eb19",
+        "order": 8,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Open",
+        "tooltip": "Open Blinds",
+        "color": "",
+        "bgcolor": "{{msg.colour}}",
+        "icon": "fa-arrow-up",
+        "payload": "{\"state\": \"open\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1190,
+        "y": 440,
+        "wires": [
+            [
+                "cf3cb6ca6190901d",
+                "519397a7c1e7a1c5"
+            ]
+        ]
+    },
+    {
+        "id": "6ae101329239d563",
+        "type": "ui_button",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "Close",
+        "group": "df1a65160e98eb19",
+        "order": 10,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Close",
+        "tooltip": "Close Blinds",
+        "color": "",
+        "bgcolor": "",
+        "icon": "fa-arrow-down",
+        "payload": "{\"state\": \"close\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1190,
+        "y": 520,
+        "wires": [
+            [
+                "cf3cb6ca6190901d",
+                "519397a7c1e7a1c5"
+            ]
+        ]
+    },
+    {
+        "id": "e71b760c61af33c7",
+        "type": "ui_button",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "Stop",
+        "group": "df1a65160e98eb19",
+        "order": 9,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "Pause action",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"state\": \"stop\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1190,
+        "y": 480,
+        "wires": [
+            [
+                "cf3cb6ca6190901d",
+                "519397a7c1e7a1c5"
+            ]
+        ]
+    },
+    {
+        "id": "cf3cb6ca6190901d",
+        "type": "mqtt out",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "Aqara E1",
+        "topic": "zigbee2mqtt/AqaraE1/set",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a86137c05ab2f4f5",
+        "x": 1600,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "3dd712f19e361d9a",
+        "type": "function",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "",
+        "func": "var data = flow.get(msg.name);\nif(msg.topic === \"control\"){\n    var value = msg.payload;\n    msg.payload = {\"position\": value};\n    data = {\"linkquality\":data.linkquality,\"position\": value}\n    flow.set(msg.name, data);\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 560,
+        "wires": [
+            [
+                "cf3cb6ca6190901d"
+            ]
+        ]
+    },
+    {
+        "id": "7278b6028c8f60db",
+        "type": "change",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "Name Device*",
+        "rules": [
+            {
+                "t": "set",
+                "p": "name",
+                "pt": "msg",
+                "to": "AqaraE1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 560,
+        "wires": [
+            [
+                "3dd712f19e361d9a"
+            ]
+        ]
+    },
+    {
+        "id": "519397a7c1e7a1c5",
+        "type": "function",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "Update",
+        "func": "msg.payload = {\"state\" : \"\"};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 440,
+        "wires": [
+            [
+                "4253e1a800c58d53"
+            ]
+        ]
+    },
+    {
+        "id": "4253e1a800c58d53",
+        "type": "mqtt out",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "Aqara E1",
+        "topic": "zigbee2mqtt/AqaraE1/get",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a86137c05ab2f4f5",
+        "x": 1760,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "504e1354fc6a8335",
+        "type": "alexa-home",
+        "z": "3602cd2ba00d3d39",
+        "g": "9716900d331881d3",
+        "conf": "241b578d.91d228",
+        "device": "154082",
+        "acknoledge": true,
+        "name": "Office Window",
+        "topic": "",
+        "x": 990,
+        "y": 240,
+        "wires": [
+            [
+                "731f4ad7a0f98ead"
+            ]
+        ]
+    },
+    {
+        "id": "731f4ad7a0f98ead",
+        "type": "function",
+        "z": "3602cd2ba00d3d39",
+        "g": "9716900d331881d3",
+        "name": "Format response",
+        "func": "var command = msg.payload;\n\nif(command === true){msg.payload = {\"state\": \"open\"}; return [msg, null];}\nif(command === false){msg.payload = {\"state\": \"close\"}; return [msg, null];}\n\nelse{\n    msg.payload = {\"position\" : msg.payload};\n    return [null, msg];\n}\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 240,
+        "wires": [
+            [
+                "13b1a0d8fd6e9c8f"
+            ],
+            [
+                "b8b6f5c1026f91af"
+            ]
+        ]
+    },
+    {
+        "id": "77c42fe742a98d54",
+        "type": "noraf-blinds",
+        "z": "3602cd2ba00d3d39",
+        "g": "9716900d331881d3",
+        "devicename": "Blinds",
+        "roomhint": "Office",
+        "name": "",
+        "passthru": false,
+        "invert": false,
+        "nora": "9022313b.c75f1",
+        "topic": "",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "filter": false,
+        "x": 970,
+        "y": 180,
+        "wires": [
+            [
+                "82f00eaf0b9d7fe4"
+            ]
+        ]
+    },
+    {
+        "id": "82f00eaf0b9d7fe4",
+        "type": "function",
+        "z": "3602cd2ba00d3d39",
+        "g": "9716900d331881d3",
+        "name": "Format response",
+        "func": "var command = msg.payload;\nmsg.payload = {\"position\" : command.openPercent};\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 180,
+        "wires": [
+            [
+                "93a1e6e0655c679d"
+            ]
+        ]
+    },
+    {
+        "id": "93a1e6e0655c679d",
+        "type": "link out",
+        "z": "3602cd2ba00d3d39",
+        "g": "9716900d331881d3",
+        "name": "",
+        "links": [
+            "cd9c21fd60410d03",
+            "be40bedf980cd536"
+        ],
+        "x": 1395,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "13b1a0d8fd6e9c8f",
+        "type": "link out",
+        "z": "3602cd2ba00d3d39",
+        "g": "9716900d331881d3",
+        "name": "",
+        "links": [
+            "be40bedf980cd536",
+            "cd9c21fd60410d03"
+        ],
+        "x": 1395,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b8b6f5c1026f91af",
+        "type": "link out",
+        "z": "3602cd2ba00d3d39",
+        "g": "9716900d331881d3",
+        "name": "",
+        "links": [
+            "be40bedf980cd536",
+            "cd9c21fd60410d03"
+        ],
+        "x": 1395,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cd9c21fd60410d03",
+        "type": "link in",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "",
+        "links": [
+            "93a1e6e0655c679d",
+            "13b1a0d8fd6e9c8f",
+            "b8b6f5c1026f91af"
+        ],
+        "x": 1375,
+        "y": 400,
+        "wires": [
+            [
+                "519397a7c1e7a1c5"
+            ]
+        ]
+    },
+    {
+        "id": "be40bedf980cd536",
+        "type": "link in",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "",
+        "links": [
+            "93a1e6e0655c679d",
+            "13b1a0d8fd6e9c8f",
+            "b8b6f5c1026f91af",
+            "9bebb9fec621d63a"
+        ],
+        "x": 1515,
+        "y": 640,
+        "wires": [
+            [
+                "cf3cb6ca6190901d"
+            ]
+        ]
+    },
+    {
+        "id": "85cf94ae6f6e4042",
+        "type": "link in",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "",
+        "links": [
+            "102feb78ef039829"
+        ],
+        "x": 935,
+        "y": 620,
+        "wires": [
+            [
+                "a6afaa49c9425908"
+            ]
+        ]
+    },
+    {
+        "id": "0507064cee6e98eb",
+        "type": "link in",
+        "z": "3602cd2ba00d3d39",
+        "g": "0a2a97f32baea540",
+        "name": "",
+        "links": [
+            "643f7ad819f24d7c"
+        ],
+        "x": 935,
+        "y": 540,
+        "wires": [
+            [
+                "6401c3b3dbe0249a"
+            ]
+        ]
+    },
+    {
+        "id": "102feb78ef039829",
+        "type": "link out",
+        "z": "3602cd2ba00d3d39",
+        "g": "01d6db5a5516d5fc",
+        "name": "",
+        "links": [
+            "85cf94ae6f6e4042"
+        ],
+        "x": 475,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "643f7ad819f24d7c",
+        "type": "link out",
+        "z": "3602cd2ba00d3d39",
+        "g": "01d6db5a5516d5fc",
+        "name": "",
+        "links": [
+            "0507064cee6e98eb"
+        ],
+        "x": 675,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "88490c91db8f1b27",
+        "type": "ui_switch",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "",
+        "label": "Daylight Mode",
+        "tooltip": "Open at sunrise, Close at sunset",
+        "group": "df1a65160e98eb19",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "fa-sun-o",
+        "oncolor": "green",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "fa-sun-o",
+        "offcolor": "grey",
+        "animate": true,
+        "x": 1040,
+        "y": 860,
+        "wires": [
+            [
+                "abf95b5779d54776"
+            ]
+        ]
+    },
+    {
+        "id": "4a9dafc4902b7752",
+        "type": "inject",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 1010,
+        "y": 780,
+        "wires": [
+            [
+                "48d20a53827cc622"
+            ]
+        ]
+    },
+    {
+        "id": "48d20a53827cc622",
+        "type": "switch",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "is Enabled",
+        "property": "daylight_mode",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1210,
+        "y": 780,
+        "wires": [
+            [
+                "0f5525750fff86ec"
+            ]
+        ]
+    },
+    {
+        "id": "0f5525750fff86ec",
+        "type": "function",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "Daylight behaviour",
+        "func": "var daylight = global.get(\"time_of_Day\"); \n\n\n\n\n//required to set the toggle once\nvar context_day = context.get(\"day\");\nvar context_night = context.get(\"night\");\n\n\n// night behaviour\nif(daylight === \"night\" && context_night === false){\n    msg.payload = {\"state\" : \"close\"};\n    context.set(\"night\", true);\n    context.set(\"day\", false);\n    return msg;\n}\n\n// day behaviour\nif(daylight === \"day\" && context_day === false){\n    msg.payload = {\"state\" : \"open\"}\n    context.set(\"day\", true);\n    context.set(\"night\", false);\n    return msg;\n}\n\n//to disable temperature mode set \"disable in onStart tab\"\n\nvar temp_mode = flow.get(\"temp_mode\");\nvar temp = 22 // ie. flow.get(\"temp_office\"); or however the timer is reporting\nvar setpoint = flow.get(\"setpoint\");\n\n\n//too hot during the day\nif(temp_mode === \"hot\"){\n    if(temp >= setpoint && daylight === \"day\"){\n        msg.payload = {\"state\" : \"close\"};\n        return msg;\n    }\n}\n\n//too cold during the day\nif(temp_mode === \"hot\"){\n  if(temp < setpoint && daylight === \"day\"){\n        msg.payload = {\"state\" : \"open\"};\n        return msg;\n    }  \n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\ncontext.set(\"day\", false); \ncontext.set(\"night\", false); \n\nflow.set(\"temp_mode\", \"disabled\");  //disabled by default",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 780,
+        "wires": [
+            [
+                "9bebb9fec621d63a",
+                "d83829d83be9eee2"
+            ]
+        ]
+    },
+    {
+        "id": "9bebb9fec621d63a",
+        "type": "link out",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "",
+        "links": [
+            "be40bedf980cd536"
+        ],
+        "x": 1615,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "8bc9e3783e6295ee",
+        "type": "ui_switch",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "",
+        "label": "Temperature mode",
+        "tooltip": "Close when too hot (red), close when cold (blue)",
+        "group": "df1a65160e98eb19",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "UI",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "hot",
+        "onvalueType": "str",
+        "onicon": "fa-thermometer-empty",
+        "oncolor": "red",
+        "offvalue": "cold",
+        "offvalueType": "str",
+        "officon": "fa-thermometer-empty",
+        "offcolor": "blue",
+        "animate": true,
+        "x": 1050,
+        "y": 980,
+        "wires": [
+            [
+                "8be1e3914ea3dbb8"
+            ]
+        ]
+    },
+    {
+        "id": "8be1e3914ea3dbb8",
+        "type": "change",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp_mode",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec2cf4306567cdaa",
+        "type": "ui_slider",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "",
+        "label": "Setpoint",
+        "tooltip": "Set setpoint temp for blinds",
+        "group": "df1a65160e98eb19",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "10",
+        "max": "30",
+        "step": 1,
+        "x": 1020,
+        "y": 920,
+        "wires": [
+            [
+                "97e7c3c67911da10"
+            ]
+        ]
+    },
+    {
+        "id": "97e7c3c67911da10",
+        "type": "change",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "setpoint",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1280,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "abf95b5779d54776",
+        "type": "change",
+        "z": "3602cd2ba00d3d39",
+        "g": "d4e67e4e5ecc9795",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "daylight_mode",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1300,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d83829d83be9eee2",
+        "type": "debug",
+        "z": "3602cd2ba00d3d39",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ba3e26b30f659d1c",
+        "type": "ui_spacer",
+        "z": "3602cd2ba00d3d39",
+        "name": "spacer",
+        "group": "df1a65160e98eb19",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "80ac1df10605574f",
+        "type": "ui_spacer",
+        "z": "3602cd2ba00d3d39",
+        "name": "spacer",
+        "group": "df1a65160e98eb19",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "8fd7fc0d46c25843",
+        "type": "ui_spacer",
+        "z": "3602cd2ba00d3d39",
+        "name": "spacer",
+        "group": "df1a65160e98eb19",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "a86137c05ab2f4f5",
+        "type": "mqtt-broker",
+        "name": "Default",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "df1a65160e98eb19",
+        "type": "ui_group",
+        "name": "Aqara Controls",
+        "tab": "841947fdb5496cc1",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false
+    },
+    {
+        "id": "241b578d.91d228",
+        "type": "alexa-home-conf",
+        "username": "quintaar"
+    },
+    {
+        "id": "9022313b.c75f1",
+        "type": "noraf-config",
+        "name": "Google Home",
+        "group": "",
+        "twofactor": "off",
+        "twofactorpin": "",
+        "localexecution": true,
+        "structure": "Home"
+    },
+    {
+        "id": "841947fdb5496cc1",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
