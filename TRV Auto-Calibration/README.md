@@ -17,10 +17,10 @@ TRVs are miss-reporting temperature values even with carefull calibration. This 
 
 
 ### Settings
-Visit Settings node to set your lat/long and other parameters. Consider [preserving variables in NodeRED](https://notenoughtech.com/home-automation/preserving-variables-in-nodered/) to keep your data stored after reboot.
+Add a flow like this and individual names for the flow variables for each TRV in use. Pair these with temperature sensors that update often. Consider [preserving variables in NodeRED](https://notenoughtech.com/home-automation/preserving-variables-in-nodered/) to keep your data stored after reboot.
 
 #### Feedback
-If you have any feedback, please use this [GitHub page](https://github.com/notenoughtech/NodeRED-Projects/tree/master/Tracking%20daylight%20in%20NodeRED) to report it
+If you have any feedback, please use this [GitHub page](https://github.com/notenoughtech/NodeRED-Projects/blob/master/TRV%20Auto-Calibration/README.md) to report it
 
 
 ## 🔗 Follow my work
