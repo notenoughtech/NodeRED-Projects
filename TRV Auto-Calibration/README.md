@@ -1,4 +1,4 @@
-![enter image description here]()
+![enter image description here](https://notenoughtech.com/wp-content/uploads/2021/12/thumbnail-copy-2.jpg)
 
 TRVs are miss-reporting temperature values even with carefull calibration. This script fixes that by calibrating the offset against a 3rd party temperature sensor.  
 
