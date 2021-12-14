@@ -2,7 +2,7 @@
 
 TRVs are miss-reporting temperature values even with carefull calibration. This script fixes that by calibrating the offset against a 3rd party temperature sensor.  
 
-- [Complete instructions]()  
+- [Complete instructions](https://notenoughtech.com/home-automation/trv-auto-calibration/)  
 
 ## Features
 - automatic calibration
