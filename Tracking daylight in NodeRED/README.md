@@ -17,7 +17,7 @@ Working with time in NodeRed to achieve a unique way of tracking day/night cycle
 - estra info about civil/nautical/astronomical daylight features
 
 ### Settings
-Visit Settings node to set your lat/long and other parameters. Consider [preserving variables in NodeRED](https://notenoughtech.com/home-automation/preserving-variables-in-nodered/) to keep your data stored after reboot.
+Visit Settings node to set your lat/long and other parameters. Consider [preserving variables in NodeRED](https://notenoughtech.com/home-automation/preserving-variables-in-nodered/) to keep your data stored after reboot. Please check the timezone set in NodeRED as well if you are not getting the corrrect results. See setting file.
 
 #### Feedback
 
