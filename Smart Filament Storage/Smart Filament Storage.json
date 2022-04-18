@@ -1,0 +1,1883 @@
+[
+    {
+        "id": "7b277ca144864600",
+        "type": "tab",
+        "label": "Smart Filament Storage",
+        "disabled": false,
+        "info": "![enter image description here](https://notenoughtech.com/wp-content/uploads/2022/04/VideoArticle-copy-2.jpg)\n\nMake your own Smart Filament Storage with pleasant interface and integration with Octoprint & Spool Manager.\n\n\n- [Complete instructions](https://notenoughtech.com/3dprint/smart-filament-storage/)  \n\n## Features\n\n    - Tracks filament usage\n    - shows temperature and humidity inside each box\n    - shows the filament stored in the box with most useful date\n    - syncs up spools with Spool Manager\n    - dessicant timer\n    - more\n\nGet your devices:\n    **- [SwitchBot Meter](https://switchbot.vip/33PFxZs)\n    - [SwitchBot Meter Plus](https://www.switch-bot.com/products/switchbot-meter-plus?sca_ref=192479.GNtsEHm88B)\n    - [SwitchBot Hub](https://switchbot.vip/3plqxed) \n    - [Sistema Food storage](https://amzn.to/3uRVqsb)\n    - [Sillica Gel](https://amzn.to/3DwlsVE)\n    - [Long term storage box](https://amzn.to/3uP8WN9)**\n\nZigBee Sensors:\n\n - Tuya TS0201 [$13.48](https://www.aliexpress.com/item/4000843004202.html)\n - Sonoff SNZB-02 [$8.49](https://shrsl.com/33b6a)\n - Tuya TYZTH-02 [$19.80](https://s.click.aliexpress.com/e/_AS7Nlk)\n - Tyua ST-TH01 [$13.12](https://s.click.aliexpress.com/e/_AKEgHC)\n - Tuya LCZ030 [$16.75](https://s.click.aliexpress.com/e/_AYJ5wq)\n - Xiaomi WSDCGQ11LM [$17.99](https://s.click.aliexpress.com/e/_ACanlk)\n - Aqara TVOC AAQS-S01 [$44.99](https://amzn.to/3F6BTr8)\n - Aqara WSDCGQ11LM [$13.99](https://s.click.aliexpress.com/e/_9wdnOe)\n - MoesHouse ZSS-ZK-THL [$15.39](https://s.click.aliexpress.com/e/_AFOzNc)\n - BlitzWolf BW-IS8 [$19.99](https://s.click.aliexpress.com/e/_9JV29u)\n\n\nDryBoxes:\n\n-  Jayo DryBox £45.99 ([Amazon](https://amzn.to/37P0TrQ))\n-   eSun Lite DryBox £47.99 ([Amazon](https://amzn.to/3vmUkol))\n-   Sunlu DryBox £49.99 ([Amazon](https://amzn.to/3vmUkol))\n-    Creality DryBox $40.99 ([Creality store](https://www.creality3dofficial.com/products/filament-dry-box?sca_ref=192479.GNtsEHm88B))\n-   Sunlu S2 DryBox $64.49 ([AliExpress](https://s.click.aliexpress.com/e/_A7femB))\n\n### Settings\nOpen Setting flow and in On Start tab define the number of your boxes, names and colours. Add SwitchBot API to use \nSwitchBot Meter devices and add SVG nodes for each filament box you want to monitor.\n\nJust note that you will need an access to the spoolmanager.db file - complete instructions are in the article.\n\n\nAdditional resources:\n- node-red-contrib-ui-svg\n- node-red-contrib-ui-table\n- node-red-dashboard\n- node-red-contrib-sqllite\n\nBased on following articles:\n- [SwitchBot API](https://notenoughtech.com/home-automation/nodered-sun-and-time/)\n- [Best ZigBee Temperature sensors](https://notenoughtech.com/tasker/how-to-sync-android-alarm-with-nodered/)\n\n\n#### Feedback\n\nIf you have any feedback, please use this [GitHub page](https://github.com/notenoughtech/NodeRED-Projects/tree/master/Aqara%20E1%20roller%20driver) to report it\n\n\n\n## 🔗 Follow my work\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/notenoughtech?label=%40notenoughtech&logo=twitter&style=for-the-badge)](https://twitter.com/NotEnoughTECH) \n[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC7V__uBIaZotHn_smHJShGQ?label=NotEnoughTech&logo=YouTube&logoColor=red&style=for-the-badge)](https://www.youtube.com/channel/UC7V__uBIaZotHn_smHJShGQ)\n[![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/not_enough_tech?logo=reddit&logoColor=white&style=for-the-badge)](https://www.reddit.com/r/Not_Enough_Tech/)\n\n# Support\nAnd if you feeling like buying me a coffee or supporting me in a more continuous way:\n\n  \n\n- [Paypal](https://www.paypal.me/notenoughtech) & [Patreon](https://www.patreon.com/NotEnoughTECH)\n\n  \n\nI hope you have enjoyed the projec",
+        "env": []
+    },
+    {
+        "id": "66b1e4d6a94da8ba",
+        "type": "group",
+        "z": "7b277ca144864600",
+        "name": "Desiccant Counter",
+        "style": {
+            "label": true,
+            "fill": "#e3f3d3"
+        },
+        "nodes": [
+            "5669bd231a3a44d3",
+            "923707abc68b08dc"
+        ],
+        "x": 74,
+        "y": 159,
+        "w": 532,
+        "h": 82
+    },
+    {
+        "id": "93458abba93b48ae",
+        "type": "group",
+        "z": "7b277ca144864600",
+        "name": "Enviromental data",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#ffffbf",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "4c216cc9b00134d5",
+            "842cde5368f3202f"
+        ],
+        "x": 628,
+        "y": 33,
+        "w": 1054,
+        "h": 534
+    },
+    {
+        "id": "1e89ed2b7812bd67",
+        "type": "group",
+        "z": "7b277ca144864600",
+        "name": "Update Spools and Handle the table",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#ffefbf",
+            "label": true,
+            "label-position": "n",
+            "color": "#001f60"
+        },
+        "nodes": [
+            "aae6c3c28cecf4b7",
+            "b15602cc3da7811b",
+            "458a66cbc94d4753",
+            "bf507b708116bdfc",
+            "11ed2c56ddfae358",
+            "50202422d07d9e90",
+            "4b789bd11818d5ea",
+            "481222bd88ea018f",
+            "88d9137164c29203",
+            "bc2658b83b1a7db2",
+            "4ec7a0a74a861a99",
+            "2fbca2228c3bbffc"
+        ],
+        "x": 74,
+        "y": 579,
+        "w": 1612,
+        "h": 162
+    },
+    {
+        "id": "f1583a04a218a6a5",
+        "type": "group",
+        "z": "7b277ca144864600",
+        "name": "MQTT Events",
+        "style": {
+            "stroke": "#9363b7",
+            "fill": "#dbcbe7",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "a218f003a336ea27",
+            "639a8f02e3329767",
+            "ae7cd92f475157f0",
+            "09070c76de755d2b",
+            "9d94a6bfe602dec5",
+            "ba24f35600ecc33f",
+            "22bc380802e6d347",
+            "2ba5c99edd024d3c",
+            "11d6e64758a8f3b8",
+            "b8430307f635fa9b",
+            "f2aacaee526d8390",
+            "ec59c0d4a3d14932"
+        ],
+        "x": 54,
+        "y": 259,
+        "w": 542,
+        "h": 302
+    },
+    {
+        "id": "525170f4a5c1127d",
+        "type": "group",
+        "z": "7b277ca144864600",
+        "name": "Storage Box Manager",
+        "style": {
+            "stroke": "#0070c0",
+            "fill": "#bfdbef",
+            "label": true,
+            "label-position": "n",
+            "color": "#001f60"
+        },
+        "nodes": [
+            "ed8ad2af353abc74",
+            "d9c77b500d9f6d5b",
+            "c854147ec7146282",
+            "9a6090af8f7b27ba",
+            "8b1a80ac8feca780",
+            "7b7a5ea5980e710a",
+            "695ee1ab83e55f77",
+            "2bfb422539075689",
+            "3586bc344449df44",
+            "0b21ca30572b76cf",
+            "528dae77fb81c571"
+        ],
+        "x": 74,
+        "y": 793,
+        "w": 1602,
+        "h": 254
+    },
+    {
+        "id": "4c216cc9b00134d5",
+        "type": "group",
+        "z": "7b277ca144864600",
+        "g": "93458abba93b48ae",
+        "name": "ZigBee Sensors data",
+        "style": {
+            "label": true,
+            "label-position": "n",
+            "fill": "#ffffff"
+        },
+        "nodes": [
+            "57af65e1b57508d0",
+            "6ff8774d37357e1a",
+            "9d4d70757fb09253",
+            "d90cf52f1c4bf689",
+            "24c5084248330f09",
+            "7ba08aeb8af358c2",
+            "527fb98b75139412",
+            "7a80a3d1695cfa52",
+            "ced1d76aad937086",
+            "ea2abcf7a2d53252",
+            "fb762b8b0d013be1"
+        ],
+        "x": 654,
+        "y": 319,
+        "w": 1002,
+        "h": 222
+    },
+    {
+        "id": "842cde5368f3202f",
+        "type": "group",
+        "z": "7b277ca144864600",
+        "g": "93458abba93b48ae",
+        "name": "SwitchBot Meter data",
+        "style": {
+            "stroke": "#777777",
+            "fill": "#ffffff",
+            "label": true,
+            "label-position": "n"
+        },
+        "nodes": [
+            "c80c3f60fc1d1139",
+            "ddcf5b68c9c5f359",
+            "be38299206626d90",
+            "8d64a0402e89a8c6",
+            "ade5daf6705a1205",
+            "1f79fc85dff7e7c6",
+            "e9c6f8f14adf916b",
+            "cee49264944a1140",
+            "59bac512360f3a97",
+            "cc895845f1cdcb5f",
+            "0e7d03e2af8f725a",
+            "c35f9e80656f71de",
+            "4e15e4d91e62a3a4"
+        ],
+        "x": 654,
+        "y": 59,
+        "w": 1002,
+        "h": 242
+    },
+    {
+        "id": "0b21ca30572b76cf",
+        "type": "group",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "Add more boxes here",
+        "style": {
+            "stroke": "#001f60",
+            "fill": "#ffffff",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "1f6214a26d4fe312",
+            "a4ced0c9bb1a5050",
+            "19bab2118baf82fb",
+            "153a03c1f5905010",
+            "5dd18b657827cf13"
+        ],
+        "x": 934,
+        "y": 819,
+        "w": 352,
+        "h": 202
+    },
+    {
+        "id": "ed8ad2af353abc74",
+        "type": "template",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "Full SVG",
+        "field": "payload.svg",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 141.73 141.73\" style=\"enable-background:new 0 0 141.73 141.73;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n    \n\t.blackBorder{fill: none; stroke:#000000; stroke-width:2; stroke-miterlimit:10;}\n\t.greyBorder{fill: none; stroke:grey; stroke-width:2; stroke-miterlimit:10;}\n\t.fontWhite{fill: white;}\n\t.fontBlack{fill: black;}\n\t.fontGrey{fill: grey;}\n\t.font{font-family: 'Roboto', sans-serif; font-weight: 900;}\n\t.fsize12{font-size:12px;}\n\t.fsize10{font-size:10px;}\n\t.fsize8{font-size:8px;}\n\t.fsize7{font-size:7px;}\n\t.fsize6{font-size:6px;}\n\t.fsize5{font-size:5px;}\n\t.fsize4{font-size:4px;}\n\t.box{{boxID}}{fill: {{box_colour}}; stroke: black;}\n\t.buttonAdd{fill: orange;}\n\t.buttonBuy{fill: green;}\n\t.buttonRemove{fill: red;}\n\t.black{fill:black;}\n\t.grey{fill:grey;}\n\t.white{fill:white;}\n\t\n\t.filamentType{fill: {{filament_colour}};}\n\t.filamentColour{{boxID}}{fill: {{filament_colour}};}\n\t.filamentPercent{}\n\n\n\n</style>\n\n\n<path id=\"Border\" class=\"blackBorder\" d=\"M127.71,133.21H14.03c-2.21,0-4.01-1.8-4.01-4.01V12.53c0-2.21,1.8-4.01,4.01-4.01h113.68\n\tc2.21,0,4.01,1.8,4.01,4.01V129.2C131.72,131.41,129.92,133.21,127.71,133.21z\"/>\n<g id=\"Bottom_Buttons\">\n\t<g id=\"BUY\">\n\t\t<path id=\"buttonBuy\" class=\"buttonBuy\" d=\"M121.52,123.53H96.6\n\t\t\tc-2.66,0-4.82-2.16-4.82-4.82v0c0-2.66,2.16-4.82,4.82-4.82h24.92c2.66,0,4.82,2.16,4.82,4.82v0\n\t\t\tC126.34,121.37,124.18,123.53,121.52,123.53z\"/>\n\t\t<g id=\"price\">\n\t\t\t\n\t\t\t\t<text id=\"price\" transform=\"matrix(1 0 0 1 105 120)\" class=\"font fontWhite fsize4\">£{{filament_price}}</text>\n\t\t\t<g id=\"priceIcon\">\n\t\t\t\t<path class=\"white\" d=\"M100.34,114.54c0.44,0,0.88-0.01,1.32,0c0.52,0.01,0.76,0.23,0.76,0.74c0.01,0.91,0,1.82,0,2.73\n\t\t\t\t\tc0,0.27-0.09,0.49-0.29,0.69c-1.31,1.3-2.61,2.61-3.92,3.92c-0.35,0.35-0.57,0.35-0.93-0.01c-0.98-0.97-1.95-1.95-2.92-2.92\n\t\t\t\t\tc-0.37-0.38-0.38-0.58,0-0.96c1.29-1.3,2.59-2.59,3.88-3.89c0.21-0.21,0.44-0.31,0.73-0.3\n\t\t\t\t\tC99.44,114.55,99.89,114.54,100.34,114.54z M97.79,122.56c0.09-0.08,0.2-0.15,0.29-0.25c1.25-1.25,2.5-2.51,3.76-3.76\n\t\t\t\t\tc0.19-0.19,0.25-0.39,0.25-0.65c-0.01-0.83,0-1.67,0-2.5c0-0.47-0.05-0.52-0.52-0.53c-0.83,0-1.67,0.01-2.5-0.01\n\t\t\t\t\tc-0.28,0-0.48,0.08-0.68,0.28c-1.23,1.24-2.46,2.46-3.69,3.7c-0.1,0.1-0.2,0.22-0.29,0.32\n\t\t\t\t\tC94.62,119.52,97.41,122.31,97.79,122.56z\"/>\n\t\t\t\t<path class=\"white\" d=\"M99.39,119.13c-0.07-0.06-0.13-0.11-0.2-0.18c0.06-0.12,0.13-0.23,0.19-0.35c0.13-0.3,0.03-0.61-0.26-0.77\n\t\t\t\t\tc-0.28-0.16-0.57-0.11-0.77,0.14c-0.25,0.31-0.25,0.53,0.02,0.82c0.06,0.06,0.11,0.13,0.11,0.27c-0.13-0.1-0.27-0.19-0.44-0.31\n\t\t\t\t\tc-0.18,0.38-0.52,0.47-1,0.52c0.55,0.26,0.56,0.9,1.09,1.02c0.01,0.18-0.07,0.28-0.21,0.2c-0.18-0.1-0.36-0.24-0.48-0.4\n\t\t\t\t\tc-0.2-0.29-0.35-0.6-0.68-0.77c-0.03-0.02-0.03-0.11-0.05-0.19c0.42-0.11,0.91-0.1,1.05-0.66c-0.06-0.09-0.12-0.18-0.2-0.31\n\t\t\t\t\tc0.12,0,0.2,0,0.27,0c0.41-0.73,0.89-0.93,1.41-0.58C99.81,117.96,99.88,118.52,99.39,119.13z\"/>\n\t\t\t\t<path class=\"white\" d=\"M101.51,116.15c0.01,0.36-0.31,0.71-0.68,0.73c-0.36,0.02-0.71-0.3-0.74-0.67\n\t\t\t\t\tc-0.03-0.38,0.32-0.74,0.7-0.75C101.16,115.45,101.5,115.78,101.51,116.15z M101.18,116.16c-0.01-0.2-0.18-0.37-0.38-0.36\n\t\t\t\t\tc-0.2,0.01-0.37,0.18-0.36,0.38c0.01,0.2,0.18,0.37,0.38,0.36C101.02,116.53,101.18,116.36,101.18,116.16z\"/>\n\t\t\t</g>\n\t\t</g>\n\t</g>\n\t<g id=\"REMOVE\">\n\t\t<path id=\"RemoveButton\" class=\"buttonRemove\" d=\"M46.03,123.53H21.11c-2.66,0-4.82-2.16-4.82-4.82v0c0-2.66,2.16-4.82,4.82-4.82h24.92\n\t\t\tc2.66,0,4.82,2.16,4.82,4.82v0C50.85,121.37,48.69,123.53,46.03,123.53z\"/>\n\t\t<text transform=\"matrix(1.0661 0 0 1 23 120)\" class=\"font fontWhite fsize4\">REMOVE</text>\n\t</g>\n\t<g id=\"NEW\">\n\t\t<path id=\"buttonAdd\" class=\"buttonAdd\" d=\"M83.78,123.53H58.86\n\t\t\tc-2.66,0-4.82-2.16-4.82-4.82v0c0-2.66,2.16-4.82,4.82-4.82h24.92c2.66,0,4.82,2.16,4.82,4.82v0\n\t\t\tC88.59,121.37,86.44,123.53,83.78,123.53z\"/>\n\t\t<text transform=\"matrix(1.1527 0 0 1 65 120)\" class=\"font fontWhite fsize4\">NEW</text>\n\t</g>\n</g>\n<g id=\"Current_Info\">\n\t<text transform=\"matrix(0.9535 0 0 1 86.7812 100.4355)\" class=\"font fontBlack fsize10\">{{filament_left}}</text>\n\t<text transform=\"matrix(1.0752 0 0 1 110 107.386)\" class=\"font fontGrey fsize8\">{{filament opened}}d</text>\n</g>\n\n<g id=\"Filament\">\n\t<ellipse id=\"FilamentPercents2\"  class=\"fill:url(#FilamentPercents);\" cx=\"56.29\" cy=\"81.47\" rx=\"20.82\" ry=\"21.18\"/>\n\t<path d=\"M74.49,71.02c-3.45-5.13-7.49-9.21-13.55-10.5c1.88,1.54,3.9,2.88,5.59,4.65c8.47,8.9,8.71,22.35,0.61,31.71\n\t\tc-0.54,0.62-2.22,1.15-0.97,2.36c1.08,1.05,1.86-0.25,2.56-0.86c6.86-5.93,9.25-13.39,7.46-22.23c-0.17-0.86-0.78-1.69-0.06-2.6\n\t\tc4.67,6.23,1.62,17.14-7.53,26.9c2.58,1.31,4.95,0.49,7.22-0.67c1.21-0.62,2.36-1.13,3.14,0.28c0.84,1.5-0.4,2.17-1.54,2.74\n\t\tc-3.78,1.89-7.65,2.64-11.51,0.41c-1.34-0.77-2.29-0.1-3.43,0.17c-9.56,2.23-18.95,2.74-27.27-3.74\n\t\tc-8.21-6.4-11.02-17.09-7.28-26.77C31.59,63.39,40.89,57.6,51.14,58c4.31,0.17,8.57,0.03,12.65,1.82c4.06,1.78,7.38,4.41,9.93,8.01\n\t\tC74.26,68.59,75.27,69.29,74.49,71.02z\"/>\n\t\n\t\t<linearGradient id=\"FilamentPercents\" gradientUnits=\"userSpaceOnUse\" x1=\"49.8505\" y1=\"58.6051\" x2=\"49.8505\" y2=\"103.4314\">\n\t\t<stop  offset=\"0\" style=\"stop-color:#FFFFFF\"/>\n\t\t<stop  offset=\"0.7104\" style=\"stop-color:#EEF2F8\"/>\t\t\n\t\t<stop  offset=\"0.8722\" style=\"stop-color:#8DAACA\"/>\n\t\t<stop  offset=\"1\" style=\"stop-color:#8BA9C9\"/>\n\t\t</linearGradient>\n\t\n\t\t<circle id=\"FilamentPercents1\" style=\"fill:url(#FilamentPercents);\" cx=\"49.85\" cy=\"81.02\" r=\"22.41\"/>\n\t<path class=\"filamentColour{{boxID}}\" d=\"M64.33,99.4c3.36,3.03,7.1,3.43,11.46,2.09C71.96,104.63,65.36,103.37,64.33,99.4z\"/>\n\t\n\t<circle class=\"filamentColour{{boxID}}\" cx=\"49.48\" cy=\"81.55\" r=\"12.8\"/>\n\t\n\t<path d=\"M59.54,89.95c-0.22-1.06,0.59-1.73,1.01-2.53c2.98-5.64,1.59-12.19-3.42-16.07c-4.45-3.45-11.35-3.2-15.54,0.57\n\t\tc-4.68,4.2-5.68,10.79-2.45,16.05c3.2,5.2,9.57,7.19,15.47,4.83c0.85-0.34,1.62-1.01,2.64-0.71c-2.85,3.43-6.75,3.25-10.48,2.63\n\t\tc-5.75-0.97-10.05-6.1-10.77-12.2c-0.65-5.42,2.79-11.24,8.06-13.62c5.41-2.44,11.64-1.18,15.7,3.2\n\t\tc4.03,4.34,4.82,10.74,1.89,15.89C61.17,88.82,60.91,90.03,59.54,89.95z\"/>\n\t<path d=\"M33.44,73.57c-1.91,5.23-2.02,10.42,0.11,15.64C30.01,86.18,29.97,76.87,33.44,73.57z\"/>\n\t<path d=\"M65.91,73.58c3.47,3.41,3.42,12.67-0.05,15.61C67.81,83.99,68,78.8,65.91,73.58z\"/>\n\t<path d=\"M41.83,97.71c5.22,1.58,10.43,1.81,16.03-0.45C54.98,100.89,45.41,100.99,41.83,97.71z\"/>\n\t<path d=\"M41.87,65.03c4.09-3.3,12.61-3.18,16.32,0.41C52.33,63.45,47.1,63.05,41.87,65.03z\"/>\n\t<path d=\"M35.91,74.09c-1.8,5-2.14,9.54-0.22,14.09C32.37,85.38,32.39,77.14,35.91,74.09z\"/>\n\t<path d=\"M63.86,88.18c1.61-4.57,1.49-9.11-0.05-13.67C66.92,77.48,66.99,84.67,63.86,88.18z\"/>\n\t<path d=\"M56.57,67.18c-4.62-1.65-9.23-1.41-13.85,0.03C45.91,64.16,52.98,64.11,56.57,67.18z\"/>\n\t<path d=\"M42.74,95.52c4.61,1.4,9.2,1.67,14.21-0.48C54.24,98.54,46.14,98.64,42.74,95.52z\"/>\n\t<path class=\"st17\" d=\"M49.67,84.91c-1.87-0.42-3.23-1.36-3.17-3.58c0.06-2.21,1.47-3.35,3.32-3.29c1.85,0.06,3.19,1.25,3.13,3.49\n\t\tC52.89,83.78,51.47,84.58,49.67,84.91z\"/>\n</g>\n\t\n\t\t\n<g id=\"Print_Brief\">\n\t<path id=\"box\" class=\"greyBorder\" d=\"M117.9,77.38H92.82c-0.85,0-1.53-0.69-1.53-1.53V63.14c0-0.85,0.69-1.53,1.53-1.53h25.08\n\t\tc0.85,0,1.53,0.69,1.53,1.53v12.71C119.43,76.7,118.75,77.38,117.9,77.38z\"/>\n\t<text transform=\"matrix(0.9174 0 0 1 95.3551 68.1945)\" class=\"font fontBlack fsize4\">H: {{filament_print_hotend}} C</text>\n\t<text transform=\"matrix(0.9174 0 0 1 95.8707 74.6916)\" class=\"font fontBlack fsize4\">B: {{filament_print_bed}} C</text>\n</g>\n<g id=\"Filament_info\">\n\t<g id=\"type\">\n\t\t<rect x=\"91.19\" y=\"50.86\" class=\"grey\" width=\"29\" height=\"6.8\"/>\n\t\t<text transform=\"matrix(1.0923 0 0 1 94.1143 56.20)\" class=\"font fsize5 fontWhite\">{{filament_type}}</text>\n\t</g>\n\t<g id=\"name\">\n\t\t<rect x=\"25.82\" y=\"42.3\" class=\"greyBorder\" width=\"93.71\" height=\"8.57\"/>\n\t\t<text transform=\"matrix(1.342 0 0 1 58.5958 49.1513)\" class=\"font fsize7 fontBlack\">{{filament_brand}}</text>\n\t</g>\n</g>\n<g id=\"Box_Name\">\n\t\t<g id=\"colour_bar\">\n\t\t\t<path id=\"box_colour\" class=\"box{{boxID}}\" d=\"M116.63,27.6H28.29\n\t\t\t\tc-1.48,0-2.69-1.2-2.69-2.69v-8.62c0-1.48,1.2-2.69,2.69-2.69h88.34c1.48,0,2.69,1.2,2.69,2.69v8.62\n\t\t\t\tC119.31,26.4,118.11,27.6,116.63,27.6z\"/>\n\t\t\t<text transform=\"matrix(1.0876 0 0 1 32.6468 23.3213)\" class=\"font fsize10 fontWhite\">{{box_name}}</text>\n\t\t</g>\n\t<g id=\"Box_Data\">\n\t\t<g id=\"humidity\">\n\t\t\t<text transform=\"matrix(1.0965 0 0 1 67.4373 36)\" class=\"font fontBlack fsize6\">{{box_humidity}}%</text>\n\t\t\t<g>\n\t\t\t\t<path d=\"M64.77,35.58c-0.26-0.13-0.51-0.27-0.64-0.54c-0.05-0.1-0.08-0.2-0.12-0.28c-0.31,0.04-0.61,0.11-0.91,0.11\n\t\t\t\t\tc-1.17,0.01-2.12-0.96-2.16-2.13c-0.04-1.15,0.79-2.07,1.77-2.26c1.14-0.22,2.3,0.51,2.55,1.64c0.05,0.2,0.04,0.42,0.06,0.63\n\t\t\t\t\tc0.01,0.11,0.02,0.22,0.07,0.32c0.21,0.4,0.43,0.8,0.64,1.2c0,0.17,0,0.34,0,0.51c-0.13,0.39-0.39,0.66-0.76,0.81\n\t\t\t\t\tC65.11,35.58,64.94,35.58,64.77,35.58z M64.73,32.6c-0.02-0.1-0.03-0.23-0.06-0.35c-0.2-0.81-0.93-1.26-1.64-1.19\n\t\t\t\t\tc-0.96,0.09-1.54,0.9-1.43,1.86c0.11,0.95,1.26,1.73,2.33,1.12c0.16-0.09,0.29-0.2,0.36-0.37c0.06-0.15,0.15-0.29,0.25-0.41\n\t\t\t\t\tC64.68,33.06,64.7,32.84,64.73,32.6z M65.05,32.85c-0.14,0.22-0.26,0.37-0.35,0.54c-0.16,0.31-0.33,0.63-0.44,0.96\n\t\t\t\t\tc-0.14,0.43,0.15,0.87,0.6,0.99c0.41,0.11,0.82-0.15,0.95-0.59c0.08-0.25,0.02-0.48-0.09-0.69\n\t\t\t\t\tC65.51,33.67,65.28,33.28,65.05,32.85z M65.12,32.54c-0.04-0.91-0.67-1.65-1.53-1.85c-0.86-0.2-1.74,0.19-2.17,0.95\n\t\t\t\t\tc-0.44,0.77-0.3,1.78,0.3,2.4c0.6,0.61,1.52,0.78,2.28,0.4c0-0.06,0-0.12,0-0.19c-1.34,0.59-2.35-0.26-2.58-1.11\n\t\t\t\t\tc-0.29-1.07,0.36-2.12,1.43-2.29c1.09-0.18,2.01,0.62,2.08,1.68C64.99,32.54,65.05,32.54,65.12,32.54z\"/>\n\t\t\t\t<path d=\"M63.85,31.84c-0.43-0.41-1.06-0.34-1.42-0.01c-0.25,0.23-0.37,0.53-0.35,0.86c0.02,0.32,0.15,0.61,0.42,0.83\n\t\t\t\t\tc-0.06,0.06-0.1,0.09-0.13,0.13c-0.48-0.25-0.69-1.17-0.28-1.75c0.38-0.54,1.22-0.8,1.93-0.21c0.05-0.02,0.11-0.05,0.22-0.1\n\t\t\t\t\tc-0.01,0.12-0.01,0.21-0.02,0.33c0.33,0.69,0.25,1.33-0.28,1.73c-0.04-0.03-0.08-0.06-0.14-0.1c0.41-0.45,0.55-0.94,0.23-1.54\n\t\t\t\t\tc-0.22,0.24-0.48,0.42-0.63,0.69c-0.1,0.17-0.26,0.22-0.4,0.12c-0.16-0.12-0.14-0.38,0.05-0.44\n\t\t\t\t\tC63.37,32.29,63.57,32.01,63.85,31.84z\"/>\n\t\t\t\t<path d=\"M64.72,35.05c-0.28-0.18-0.37-0.42-0.25-0.75c0.08-0.23,0.21-0.44,0.33-0.65c0.01-0.02,0.07,0,0.15,0\n\t\t\t\t\tc-0.02,0.09-0.04,0.16-0.06,0.22c-0.04,0.1-0.1,0.2-0.14,0.3c-0.16,0.36-0.15,0.42,0.08,0.77\n\t\t\t\t\tC64.78,34.97,64.75,35.01,64.72,35.05z\"/>\n\t\t\t</g>\n\t\t</g>\n\t\t<g id=\"temp\">\n\t\t\t<text transform=\"matrix(1.0204 0 0 1 39.9519 36)\" class=\"font fontBlack fsize6\">{{box_temperature}}</text>\n\t\t\t<g>\n\t\t\t\t<path d=\"M35.04,32.51c0-0.46,0.02-0.92-0.01-1.38c-0.03-0.5,0.43-0.89,0.84-0.9c0.81,0,1.62-0.01,2.43,0\n\t\t\t\t\tc0.33,0.01,0.58,0.17,0.74,0.49c0.08,0.17,0.11,0.32,0.11,0.5c0,0.9,0,1.8,0,2.7c0,0.46-0.39,0.92-0.89,0.92\n\t\t\t\t\tc-0.77,0-1.54,0-2.32,0c-0.47,0-0.94-0.39-0.91-0.93C35.06,33.45,35.04,32.98,35.04,32.51z M38.91,32.53\n\t\t\t\t\tC38.91,32.53,38.91,32.53,38.91,32.53c0-0.51,0-1.02,0-1.53c0-0.18-0.04-0.34-0.19-0.44c-0.17-0.11-0.35-0.2-0.57-0.2\n\t\t\t\t\tc-0.46,0.01-0.92,0-1.38,0c-0.26,0-0.53-0.02-0.79,0c-0.49,0.04-0.73,0.28-0.7,0.71c0.01,0.22,0,0.45,0,0.68\n\t\t\t\t\tc0,0.74,0,1.49,0,2.23c0,0.38,0.14,0.56,0.5,0.65c0.12,0.03,0.25,0.04,0.38,0.05c0.63,0,1.25,0,1.88,0\n\t\t\t\t\tc0.12,0,0.24-0.01,0.35-0.04c0.45-0.12,0.54-0.31,0.53-0.65C38.91,33.51,38.91,33.02,38.91,32.53z\"/>\n\t\t\t\t<path d=\"M37.51,32.2c0,0.2,0,0.39,0,0.59c0,0.2,0.01,0.37,0.15,0.54c0.22,0.28,0.05,0.66-0.29,0.77\n\t\t\t\t\tc-0.4,0.12-0.75-0.02-0.9-0.38c-0.04-0.1-0.05-0.2,0.05-0.29c0.21-0.19,0.24-0.44,0.23-0.72c-0.02-0.44-0.01-0.88,0-1.32\n\t\t\t\t\tc0-0.31,0.15-0.43,0.45-0.38c0.22,0.03,0.31,0.13,0.31,0.35C37.52,31.63,37.51,31.92,37.51,32.2z M37.19,31.69\n\t\t\t\t\tc0.09-0.12,0.08-0.24,0.08-0.37c0-0.1-0.03-0.18-0.15-0.18c-0.11,0.01-0.14,0.09-0.14,0.19c0,0.32,0,0.65,0,0.97\n\t\t\t\t\tc0,0.3,0,0.6,0,0.9c-0.05,0.03-0.09,0.05-0.12,0.07c-0.16,0.1-0.21,0.25-0.17,0.43c0.04,0.17,0.17,0.21,0.31,0.27\n\t\t\t\t\tc0.14,0.05,0.25-0.01,0.36-0.06c0.22-0.09,0.29-0.45,0.08-0.57c-0.15-0.09-0.2-0.19-0.19-0.35c0-0.03-0.03-0.05-0.09-0.14\n\t\t\t\t\tc0.01,0.26-0.1,0.46,0.1,0.63c0.08,0.07,0.06,0.16-0.01,0.23c-0.07,0.08-0.15,0.1-0.23,0.04c-0.06-0.04-0.11-0.1-0.18-0.16\n\t\t\t\t\tc0.16-0.11,0.18-0.25,0.18-0.42c-0.01-0.47,0-0.94,0-1.41c0-0.09-0.03-0.19,0.07-0.3C37.14,31.55,37.17,31.62,37.19,31.69z\"/>\n\t\t\t\t<path d=\"M37.94,30.66c-0.09,0-0.19,0.01-0.28,0.01c-0.51,0-1.02,0-1.53,0c-0.11,0-0.22,0.01-0.31,0.05\n\t\t\t\t\tc-0.2,0.07-0.31,0.19-0.31,0.43c0.01,0.91,0,1.82,0.01,2.73c0,0.28,0.12,0.42,0.41,0.47c0.12,0.02,0.23,0.04,0.35,0.04\n\t\t\t\t\tc0.61-0.01,1.23-0.01,1.84-0.04c0.34-0.02,0.43-0.14,0.44-0.49c0-0.4,0-0.8,0-1.2c0-0.09,0.01-0.19,0.01-0.31\n\t\t\t\t\tc0.08,0.03,0.14,0.04,0.15,0.07c0.02,0.06,0.02,0.13,0.02,0.2c0,0.39,0,0.78,0,1.17c0,0.37-0.24,0.64-0.61,0.69\n\t\t\t\t\tc-0.07,0.01-0.14,0.01-0.2,0.01c-0.59,0-1.17,0-1.76,0c-0.12,0-0.25-0.03-0.37-0.06c-0.29-0.08-0.4-0.29-0.4-0.57\n\t\t\t\t\tc0-0.03,0-0.06,0-0.09c0-0.82,0-1.64,0-2.47c0-0.56,0.15-0.71,0.71-0.72c0.55-0.01,1.1,0,1.64,0c0.06,0,0.13,0.02,0.19,0.03\n\t\t\t\t\tC37.94,30.62,37.94,30.64,37.94,30.66z\"/>\n\t\t\t</g>\n\t\t</g>\n\t\t<g id=\"desiccant\">\n\t\t\t<g>\n\t\t\t\t<path class=\"st30\" d=\"M90.17,29.71c0,0.19-0.01,0.38-0.01,0.58c-0.29,0-0.58,0-0.87,0c0-0.19-0.01-0.38-0.01-0.58\n\t\t\t\t\tC89.57,29.71,89.87,29.71,90.17,29.71z\"/>\n\t\t\t\t<path d=\"M89.29,30.29c0.29,0,0.58,0,0.87,0c0.25,0.07,0.49,0.14,0.74,0.21c0.22,0.16,0.45,0.33,0.67,0.49\n\t\t\t\t\tc0.48,0.52,0.74,1.12,0.73,1.84c-0.02,1.18-0.87,2.17-2.05,2.4c-0.71,0.14-1.34-0.03-1.97-0.39c-1.23-0.71-1.57-2.62-0.45-3.78\n\t\t\t\t\tc0.02-0.02,0.03-0.04,0.05-0.07c0.24-0.16,0.49-0.33,0.73-0.49C88.83,30.43,89.06,30.36,89.29,30.29z M89.72,32.4\n\t\t\t\t\tc0-0.48,0-0.96,0-1.44c-0.82-0.05-1.61,0.63-1.81,1.3c-0.27,0.86,0.11,1.58,0.87,2.08c0.73,0.47,1.76,0.25,2.22-0.23\n\t\t\t\t\tc-0.35-0.35-0.7-0.7-1.05-1.05c0.21-0.17,0.41-0.33,0.62-0.5c0.14-0.11,0.3-0.21,0.44-0.33c0.04-0.04,0.05-0.12,0.07-0.19\n\t\t\t\t\tc-0.07-0.02-0.14-0.04-0.21-0.05c-0.03,0-0.07,0.02-0.1,0.04C90.41,32.15,90.07,32.27,89.72,32.4z M91.25,33.16\n\t\t\t\t\tc-0.02,0.01-0.04,0.01-0.06,0.02c0.02,0.17,0.04,0.35,0.07,0.52c0.01,0.03,0.08,0.07,0.13,0.07c0.12,0,0.4-0.26,0.45-0.41\n\t\t\t\t\tc-0.07,0-0.14,0-0.15,0c0-0.28,0.01-0.55,0-0.82c-0.03-0.63-0.58-1.35-1.17-1.52C90.43,31,90.33,31.01,90.25,31\n\t\t\t\t\tc-0.01,0.02-0.03,0.05-0.04,0.07c1.08,0.39,1.46,1.15,1.25,2.26C91.36,33.25,91.31,33.21,91.25,33.16z\"/>\n\t\t\t\t<path class=\"st31\" d=\"M88.61,30.5c-0.24,0.16-0.49,0.33-0.73,0.49c-0.1-0.15-0.19-0.31-0.31-0.49c0.24-0.16,0.47-0.3,0.74-0.48\n\t\t\t\t\tC88.41,30.19,88.51,30.35,88.61,30.5z\"/>\n\t\t\t\t<path class=\"st31\" d=\"M91.57,30.99c-0.22-0.16-0.45-0.33-0.67-0.49c0.1-0.15,0.19-0.31,0.3-0.48c0.24,0.17,0.44,0.32,0.68,0.48\n\t\t\t\t\tC91.77,30.67,91.67,30.83,91.57,30.99z\"/>\n\t\t\t\t<path class=\"st32\" d=\"M89.95,33.05c0.35,0.35,0.7,0.7,1.05,1.05c-0.46,0.49-1.5,0.71-2.22,0.23c-0.76-0.5-1.14-1.22-0.87-2.08\n\t\t\t\t\tc0.21-0.67,1-1.35,1.81-1.3c0,0.48,0,0.96,0,1.44c-0.05,0.03-0.11,0.07-0.16,0.1c-0.15,0.1-0.21,0.22-0.14,0.4\n\t\t\t\t\tc0.07,0.17,0.21,0.24,0.4,0.19C89.87,33.08,89.91,33.07,89.95,33.05z\"/>\n\t\t\t\t<path class=\"st2\" d=\"M91.25,33.16c0.06,0.05,0.11,0.1,0.2,0.17c0.22-1.11-0.16-1.87-1.25-2.26c0.01-0.02,0.03-0.05,0.04-0.07\n\t\t\t\t\tc0.09,0.01,0.18,0,0.26,0.03c0.59,0.17,1.14,0.89,1.17,1.52c0.01,0.27,0,0.53,0,0.82c0.02,0,0.08,0,0.15,0\n\t\t\t\t\tc-0.05,0.15-0.33,0.41-0.45,0.41c-0.04,0-0.12-0.04-0.13-0.07c-0.03-0.17-0.05-0.35-0.07-0.52\n\t\t\t\t\tC91.21,33.17,91.23,33.16,91.25,33.16z\"/>\n\t\t\t</g>\n\t\t\t<text transform=\"matrix(1.0067 0 0 1 93.4485 36)\" class=\"font fontBlack fsize6\">{{box_dissecant_age}}d</text>\n\t\t</g>\n\t</g>\n</g>\n</svg>\n\n",
+        "output": "str",
+        "x": 640,
+        "y": 900,
+        "wires": [
+            [
+                "7b7a5ea5980e710a"
+            ]
+        ]
+    },
+    {
+        "id": "d9c77b500d9f6d5b",
+        "type": "template",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "Empty SVG",
+        "field": "payload.svg",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 141.73 141.73\" style=\"enable-background:new 0 0 141.73 141.73;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\n\t.blackBorder{fill: none; stroke:#000000; stroke-width:2; stroke-miterlimit:10;}\n\t.fontWhite{fill: white;}\n\t.fontBlack{fill: black;}\n\t.font{font-family: 'Roboto', sans-serif; font-weight: 900;}\n\t.fsize12{font-size:12px;}\n\t.fsize10{font-size:10px;}\n\t.fsize8{font-size:6px;}\n\t.box{{boxID}}{fill: {{box_colour}}; stroke: black;}\n\t.buttonAdd{fill: orange}\n\t.black{fill:black;}\n\t.grey{fill:grey;}\n\t.white{fill:white;}\n\t\n</style>\n\n<g id=\"EMPTY\">\n\t<path id=\"Border\" class=\"blackBorder\" d=\"M127.71,133.21H14.03\n\t\tc-2.21,0-4.01-1.8-4.01-4.01V12.53c0-2.21,1.8-4.01,4.01-4.01h113.68c2.21,0,4.01,1.8,4.01,4.01V129.2\n\t\tC131.72,131.41,129.92,133.21,127.71,133.21z\"/>\n\t<g id=\"Bottom_Buttons\">\n\t\t<g id=\"NEW\">\n\t\t\t<path id=\"NewButton\" class=\"buttonAdd\" d=\"M98.76,126.91h-52.6\n\t\t\t\tc-2.88,0-5.21-2.33-5.21-5.21v-1.55c0-2.88,2.33-5.21,5.21-5.21h52.6c2.88,0,5.21,2.33,5.21,5.21v1.55\n\t\t\t\tC103.97,124.58,101.63,126.91,98.76,126.91z\"/>\n\t\t\t<text transform=\"matrix(1.6911 0 0 1 61.8521 123.6348)\" class=\"font fsize8 fontWhite\">ADD</text>\n\t\t</g>\n\t</g>\n\t<g id=\"Box_Name\">\n\t\t<g id=\"colour_bar\">\n\t\t\t<path id=\"box_colour\" class=\"box{{boxID}}\" d=\"M116.63,27.6H28.29\n\t\t\t\tc-1.48,0-2.69-1.2-2.69-2.69v-8.62c0-1.48,1.2-2.69,2.69-2.69h88.34c1.48,0,2.69,1.2,2.69,2.69v8.62\n\t\t\t\tC119.31,26.4,118.11,27.6,116.63,27.6z\"/>\n\t\t\t<text transform=\"matrix(1.0876 0 0 1 31.6468 23.3213)\" class=\"font fsize10 fontWhite\">{{box_name}}</text>\n\t\t</g>\n\t\t<g id=\"Box_Data\">\n\t\t\t<g id=\"humidity\">\n\t\t\t\t<text transform=\"matrix(1.0965 0 0 1 68.0178 43.6956)\" class=\"font fsize8 fontBlack\">{{box_humidity}}%</text>\n\t\t\t\t<g>\n\t\t\t\t\t<path d=\"M62.58,44.19c-0.33-0.17-0.66-0.35-0.83-0.7c-0.06-0.13-0.11-0.26-0.15-0.37c-0.4,0.05-0.78,0.14-1.17,0.14\n\t\t\t\t\t\tc-1.51,0.01-2.73-1.24-2.79-2.75c-0.05-1.48,1.02-2.67,2.28-2.92c1.47-0.29,2.97,0.66,3.3,2.12c0.06,0.26,0.05,0.54,0.08,0.81\n\t\t\t\t\t\tc0.02,0.14,0.03,0.29,0.09,0.41c0.27,0.52,0.55,1.03,0.83,1.55c0,0.22,0,0.44,0,0.66c-0.17,0.5-0.5,0.85-0.99,1.05\n\t\t\t\t\t\tC63.01,44.19,62.8,44.19,62.58,44.19z M62.51,40.35c-0.02-0.13-0.03-0.3-0.07-0.46c-0.26-1.04-1.2-1.63-2.12-1.54\n\t\t\t\t\t\tc-1.24,0.11-1.99,1.16-1.84,2.4c0.15,1.22,1.63,2.23,3.01,1.45c0.2-0.11,0.37-0.26,0.47-0.48c0.08-0.19,0.19-0.37,0.32-0.54\n\t\t\t\t\t\tC62.46,40.94,62.48,40.66,62.51,40.35z M62.93,40.68c-0.18,0.28-0.34,0.48-0.45,0.7c-0.21,0.41-0.43,0.81-0.57,1.24\n\t\t\t\t\t\tc-0.18,0.56,0.19,1.12,0.77,1.28c0.53,0.14,1.06-0.2,1.23-0.76c0.1-0.32,0.03-0.61-0.11-0.89\n\t\t\t\t\t\tC63.53,41.73,63.23,41.23,62.93,40.68z M63.02,40.27c-0.05-1.17-0.87-2.13-1.97-2.39c-1.11-0.26-2.25,0.25-2.8,1.23\n\t\t\t\t\t\tc-0.56,1-0.39,2.3,0.39,3.1c0.78,0.79,1.96,1.01,2.94,0.51c0-0.07,0-0.15,0-0.24c-1.73,0.76-3.04-0.33-3.33-1.43\n\t\t\t\t\t\tc-0.37-1.38,0.47-2.74,1.85-2.96c1.41-0.23,2.6,0.8,2.69,2.17C62.86,40.27,62.93,40.27,63.02,40.27z\"/>\n\t\t\t\t\t<path d=\"M61.39,39.37c-0.55-0.53-1.37-0.44-1.84-0.02c-0.33,0.3-0.48,0.68-0.45,1.12c0.03,0.42,0.19,0.78,0.54,1.07\n\t\t\t\t\t\tc-0.08,0.07-0.13,0.12-0.17,0.16c-0.62-0.32-0.89-1.52-0.36-2.27c0.49-0.7,1.58-1.03,2.5-0.27c0.07-0.03,0.14-0.07,0.28-0.13\n\t\t\t\t\t\tc-0.01,0.16-0.02,0.27-0.03,0.43c0.43,0.89,0.32,1.71-0.36,2.24c-0.05-0.03-0.11-0.07-0.19-0.13c0.53-0.58,0.71-1.21,0.29-1.98\n\t\t\t\t\t\tc-0.29,0.32-0.62,0.54-0.82,0.9c-0.13,0.23-0.34,0.29-0.51,0.16c-0.2-0.15-0.18-0.49,0.06-0.56\n\t\t\t\t\t\tC60.77,39.95,61.02,39.59,61.39,39.37z\"/>\n\t\t\t\t\t<path d=\"M62.5,43.52c-0.37-0.24-0.48-0.54-0.33-0.97c0.11-0.29,0.27-0.56,0.42-0.84c0.01-0.02,0.1,0,0.2,0\n\t\t\t\t\t\tc-0.03,0.11-0.05,0.21-0.08,0.29c-0.06,0.13-0.13,0.25-0.19,0.38c-0.2,0.46-0.2,0.55,0.1,0.99\n\t\t\t\t\t\tC62.59,43.41,62.54,43.47,62.5,43.52z\"/>\n\t\t\t\t</g>\n\t\t\t</g>\n\t\t\t<g id=\"temp\">\n\t\t\t\t<text transform=\"matrix(1.0204 0 0 1 32.511 43.6356)\" class=\"font fsize8 fontBlack\">{{box_temperature}}</text>\n\t\t\t\t<g>\n\t\t\t\t\t<path d=\"M24.16,40.83c0-0.59,0.03-1.19-0.01-1.78c-0.04-0.64,0.55-1.16,1.09-1.16c1.05,0,2.09-0.01,3.14,0\n\t\t\t\t\t\tc0.43,0.01,0.75,0.21,0.95,0.63c0.11,0.22,0.14,0.42,0.14,0.64c0,1.16,0,2.32,0,3.49c0,0.59-0.51,1.19-1.16,1.19\n\t\t\t\t\t\tc-1,0-1.99,0-2.99,0c-0.61,0-1.22-0.51-1.18-1.2C24.19,42.05,24.16,41.44,24.16,40.83z M29.17,40.87\n\t\t\t\t\t\tC29.17,40.87,29.17,40.87,29.17,40.87c0-0.66,0-1.32,0-1.97c0-0.23-0.05-0.44-0.24-0.57c-0.22-0.15-0.45-0.26-0.74-0.25\n\t\t\t\t\t\tc-0.59,0.01-1.19,0-1.78,0c-0.34,0-0.68-0.02-1.02,0c-0.63,0.05-0.95,0.36-0.91,0.92c0.02,0.29,0,0.58,0,0.87\n\t\t\t\t\t\tc0,0.96,0,1.92,0,2.88c0,0.49,0.18,0.73,0.64,0.84c0.16,0.04,0.32,0.06,0.49,0.06c0.81,0.01,1.62,0.01,2.43,0\n\t\t\t\t\t\tc0.15,0,0.31-0.01,0.45-0.05c0.58-0.16,0.7-0.4,0.69-0.84C29.16,42.13,29.17,41.5,29.17,40.87z\"/>\n\t\t\t\t\t<path d=\"M27.36,40.44c0,0.25,0,0.51,0,0.76c0,0.25,0.02,0.47,0.19,0.7c0.28,0.36,0.07,0.85-0.38,0.99\n\t\t\t\t\t\tc-0.51,0.16-0.96-0.02-1.17-0.49c-0.06-0.13-0.06-0.26,0.06-0.38c0.27-0.25,0.31-0.57,0.3-0.93c-0.02-0.57-0.01-1.14,0-1.71\n\t\t\t\t\t\tc0.01-0.4,0.2-0.55,0.58-0.5c0.28,0.04,0.4,0.16,0.41,0.45C27.36,39.7,27.36,40.07,27.36,40.44z M26.94,39.78\n\t\t\t\t\t\tc0.12-0.15,0.1-0.32,0.1-0.47c0-0.13-0.04-0.23-0.19-0.23c-0.15,0.01-0.18,0.12-0.18,0.24c0,0.42,0,0.83,0,1.25\n\t\t\t\t\t\tc0,0.39,0,0.78,0,1.16c-0.07,0.04-0.11,0.07-0.15,0.09c-0.2,0.13-0.27,0.33-0.22,0.56c0.05,0.22,0.22,0.28,0.4,0.34\n\t\t\t\t\t\tc0.18,0.06,0.32-0.01,0.47-0.08c0.29-0.12,0.37-0.58,0.11-0.74c-0.2-0.12-0.25-0.25-0.25-0.45c0-0.03-0.04-0.07-0.11-0.18\n\t\t\t\t\t\tc0.01,0.34-0.13,0.6,0.13,0.81c0.11,0.09,0.07,0.2-0.01,0.3c-0.09,0.1-0.19,0.13-0.3,0.05c-0.08-0.05-0.14-0.13-0.23-0.21\n\t\t\t\t\t\tc0.21-0.14,0.24-0.33,0.24-0.54c-0.01-0.61-0.01-1.21,0-1.82c0-0.12-0.04-0.25,0.09-0.38C26.88,39.6,26.91,39.69,26.94,39.78z\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t<path d=\"M27.91,38.45c-0.12,0-0.24,0.01-0.36,0.01c-0.66,0-1.31,0-1.97,0c-0.14,0-0.28,0.02-0.41,0.06\n\t\t\t\t\t\tc-0.26,0.09-0.4,0.25-0.4,0.56c0.02,1.18,0,2.35,0.01,3.53c0,0.37,0.15,0.54,0.53,0.61c0.15,0.03,0.3,0.06,0.45,0.05\n\t\t\t\t\t\tc0.79-0.01,1.59-0.02,2.38-0.05c0.44-0.02,0.56-0.18,0.57-0.63c0.01-0.52,0-1.04,0-1.56c0-0.12,0.01-0.24,0.02-0.41\n\t\t\t\t\t\tc0.1,0.04,0.18,0.05,0.2,0.09c0.03,0.08,0.02,0.17,0.02,0.26c0,0.51,0,1.01,0,1.52c0,0.48-0.31,0.83-0.79,0.89\n\t\t\t\t\t\tc-0.09,0.01-0.18,0.01-0.26,0.01c-0.76,0-1.52,0-2.27,0c-0.16,0-0.32-0.04-0.48-0.08c-0.37-0.1-0.52-0.37-0.52-0.73\n\t\t\t\t\t\tc0-0.04,0-0.08,0-0.11c0-1.06,0-2.12,0-3.19c0-0.72,0.19-0.92,0.92-0.93c0.71-0.01,1.41,0,2.12,0c0.08,0,0.17,0.02,0.25,0.03\n\t\t\t\t\t\tC27.91,38.4,27.91,38.42,27.91,38.45z\"/>\n\t\t\t\t</g>\n\t\t\t</g>\n\t\t\t<g id=\"desiccant\">\n\t\t\t\t<g id=\"desiccanticon\">\n\t\t\t\t\t<path class=\"black\" d=\"M95.38,37.27c0,0.25-0.01,0.5-0.01,0.74c-0.38,0-0.75,0-1.13,0c0-0.25-0.01-0.5-0.01-0.74\n\t\t\t\t\t\tC94.61,37.27,95,37.27,95.38,37.27z\"/>\n\t\t\t\t\t<path d=\"M94.24,38.02c0.38,0,0.75,0,1.13,0c0.32,0.09,0.63,0.18,0.95,0.27c0.29,0.21,0.58,0.43,0.87,0.64\n\t\t\t\t\t\tc0.62,0.67,0.96,1.45,0.94,2.37c-0.02,1.52-1.12,2.81-2.65,3.1c-0.92,0.18-1.74-0.04-2.54-0.5c-1.59-0.92-2.03-3.38-0.59-4.89\n\t\t\t\t\t\tc0.02-0.03,0.04-0.06,0.06-0.09c0.31-0.21,0.63-0.42,0.94-0.63C93.66,38.2,93.95,38.11,94.24,38.02z M94.8,40.74\n\t\t\t\t\t\tc0-0.62,0-1.24,0-1.85c-1.05-0.07-2.08,0.82-2.34,1.68c-0.34,1.11,0.14,2.04,1.13,2.68c0.94,0.61,2.27,0.33,2.87-0.3\n\t\t\t\t\t\tc-0.45-0.45-0.9-0.91-1.35-1.36c0.27-0.21,0.53-0.43,0.8-0.64c0.19-0.15,0.39-0.28,0.57-0.43c0.06-0.05,0.06-0.16,0.09-0.24\n\t\t\t\t\t\tc-0.09-0.02-0.18-0.05-0.28-0.06c-0.04,0-0.09,0.03-0.13,0.05C95.7,40.43,95.25,40.58,94.8,40.74z M96.78,41.72\n\t\t\t\t\t\tc-0.03,0.01-0.05,0.02-0.08,0.03c0.03,0.22,0.05,0.45,0.09,0.67c0.01,0.04,0.11,0.1,0.16,0.1c0.16,0,0.52-0.33,0.58-0.53\n\t\t\t\t\t\tc-0.09,0-0.17,0-0.2,0c0-0.37,0.01-0.71,0-1.05c-0.03-0.82-0.74-1.74-1.51-1.97c-0.11-0.03-0.23-0.02-0.34-0.03\n\t\t\t\t\t\tc-0.02,0.03-0.03,0.06-0.05,0.09c1.4,0.51,1.89,1.48,1.61,2.92C96.93,41.85,96.86,41.78,96.78,41.72z\"/>\n\t\t\t\t\t<path class=\"black\" d=\"M93.36,38.29c-0.31,0.21-0.63,0.42-0.94,0.63c-0.13-0.2-0.25-0.4-0.4-0.64c0.31-0.2,0.6-0.39,0.95-0.62\n\t\t\t\t\t\tC93.11,37.89,93.24,38.09,93.36,38.29z\"/>\n\t\t\t\t\t<path class=\"black\" d=\"M97.19,38.93c-0.29-0.21-0.58-0.43-0.87-0.64c0.12-0.2,0.25-0.39,0.39-0.62\n\t\t\t\t\t\tc0.31,0.22,0.57,0.41,0.87,0.62C97.45,38.51,97.32,38.72,97.19,38.93z\"/>\n\t\t\t\t\t<path class=\"grey\" d=\"M95.11,41.59c0.45,0.45,0.9,0.91,1.35,1.36c-0.6,0.63-1.93,0.92-2.87,0.3c-0.98-0.64-1.47-1.57-1.13-2.68\n\t\t\t\t\t\tc0.27-0.86,1.29-1.75,2.34-1.68c0,0.62,0,1.24,0,1.85c-0.07,0.04-0.14,0.09-0.21,0.13c-0.19,0.13-0.27,0.29-0.18,0.51\n\t\t\t\t\t\tc0.09,0.22,0.27,0.31,0.52,0.25C94.99,41.62,95.05,41.61,95.11,41.59z\"/>\n\t\t\t\t\t<path class=\"white\" d=\"M96.78,41.72c0.07,0.06,0.15,0.12,0.26,0.22c0.28-1.44-0.21-2.41-1.61-2.92c0.02-0.03,0.03-0.06,0.05-0.09\n\t\t\t\t\t\tc0.11,0.01,0.23,0,0.34,0.03c0.77,0.22,1.48,1.15,1.51,1.97c0.01,0.34,0,0.69,0,1.05c0.02,0,0.11,0,0.2,0\n\t\t\t\t\t\tc-0.06,0.2-0.42,0.53-0.58,0.53c-0.06,0-0.15-0.05-0.16-0.1c-0.04-0.22-0.06-0.45-0.09-0.67\n\t\t\t\t\t\tC96.73,41.74,96.76,41.73,96.78,41.72z\"/>\n\t\t\t\t</g>\n\t\t\t\t<text transform=\"matrix(1.0067 0 0 1 99.6203 43.8131)\" class=\"font fsize8 fontBlack\">{{box_dissecant_age}} d</text>\n\t\t\t</g>\n\t\t</g>\n\t</g>\n</g>\n</svg>\n",
+        "output": "str",
+        "x": 650,
+        "y": 840,
+        "wires": [
+            [
+                "7b7a5ea5980e710a"
+            ]
+        ]
+    },
+    {
+        "id": "c854147ec7146282",
+        "type": "template",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "Loaded SVG",
+        "field": "payload.svg",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n\t viewBox=\"0 0 141.73 141.73\" style=\"enable-background:new 0 0 141.73 141.73;\" xml:space=\"preserve\">\n<style type=\"text/css\">\n\n\t.blackBorder{fill: none; stroke:#000000; stroke-width:2; stroke-miterlimit:10;}\n\t.greyBorder{fill: none; stroke:grey; stroke-width:2; stroke-miterlimit:10;}\n\t.fontWhite{fill: white;}\n\t.fontBlack{fill: black;}\n\t.fontGrey{fill: grey;}\n\t.font{font-family: 'Roboto', sans-serif; font-weight: 900;}\n\t.fsize12{font-size:12px;}\n\t.fsize10{font-size:10px;}\n\t.fsize8{font-size:8px;}\n\t.fsize7{font-size:7px;}\n\t.fsize6{font-size:6px;}\n\t.fsize5{font-size:5px;}\n\t.fsize4{font-size:4px;}\n\t.box{{boxID}}{fill: {{box_colour}}; stroke: red;}\n\t.buttonAdd{fill: orange;}\n\t.buttonBuy{fill: green;}\n\t.buttonRemove{fill: red;}\n\t.black{fill:black;}\n\t.grey{fill:grey;}\n\t.white{fill:white;}\n\t\n\t.filamentType{fill: {{filament_colour}};}\n\t.filamentColour{{boxID}}{fill: {{filament_colour}};}\n\t\n\t\n\n\n\n</style>\n\n\n<path id=\"Border\" class=\"blackBorder\" d=\"M127.71,133.21H14.03c-2.21,0-4.01-1.8-4.01-4.01V12.53c0-2.21,1.8-4.01,4.01-4.01h113.68\n\tc2.21,0,4.01,1.8,4.01,4.01V129.2C131.72,131.41,129.92,133.21,127.71,133.21z\"/>\n\n<g id=\"Bottom_Buttons\">\n\t<g id=\"BUY\">\n\t\t<path id=\"buttonBuy\" class=\"buttonBuy\" d=\"M121.52,123.53H96.6\n\t\t\tc-2.66,0-4.82-2.16-4.82-4.82v0c0-2.66,2.16-4.82,4.82-4.82h24.92c2.66,0,4.82,2.16,4.82,4.82v0\n\t\t\tC126.34,121.37,124.18,123.53,121.52,123.53z\"/>\n\t\t<g id=\"price\">\n\t\t\t\n\t\t\t\t<text id=\"price\" transform=\"matrix(1 0 0 1 105 120)\" class=\"font fontWhite fsize4\">£{{filament_price}}</text>\n\t\t\t<g id=\"priceIcon\">\n\t\t\t\t<path class=\"white\" d=\"M100.34,114.54c0.44,0,0.88-0.01,1.32,0c0.52,0.01,0.76,0.23,0.76,0.74c0.01,0.91,0,1.82,0,2.73\n\t\t\t\t\tc0,0.27-0.09,0.49-0.29,0.69c-1.31,1.3-2.61,2.61-3.92,3.92c-0.35,0.35-0.57,0.35-0.93-0.01c-0.98-0.97-1.95-1.95-2.92-2.92\n\t\t\t\t\tc-0.37-0.38-0.38-0.58,0-0.96c1.29-1.3,2.59-2.59,3.88-3.89c0.21-0.21,0.44-0.31,0.73-0.3\n\t\t\t\t\tC99.44,114.55,99.89,114.54,100.34,114.54z M97.79,122.56c0.09-0.08,0.2-0.15,0.29-0.25c1.25-1.25,2.5-2.51,3.76-3.76\n\t\t\t\t\tc0.19-0.19,0.25-0.39,0.25-0.65c-0.01-0.83,0-1.67,0-2.5c0-0.47-0.05-0.52-0.52-0.53c-0.83,0-1.67,0.01-2.5-0.01\n\t\t\t\t\tc-0.28,0-0.48,0.08-0.68,0.28c-1.23,1.24-2.46,2.46-3.69,3.7c-0.1,0.1-0.2,0.22-0.29,0.32\n\t\t\t\t\tC94.62,119.52,97.41,122.31,97.79,122.56z\"/>\n\t\t\t\t<path class=\"white\" d=\"M99.39,119.13c-0.07-0.06-0.13-0.11-0.2-0.18c0.06-0.12,0.13-0.23,0.19-0.35c0.13-0.3,0.03-0.61-0.26-0.77\n\t\t\t\t\tc-0.28-0.16-0.57-0.11-0.77,0.14c-0.25,0.31-0.25,0.53,0.02,0.82c0.06,0.06,0.11,0.13,0.11,0.27c-0.13-0.1-0.27-0.19-0.44-0.31\n\t\t\t\t\tc-0.18,0.38-0.52,0.47-1,0.52c0.55,0.26,0.56,0.9,1.09,1.02c0.01,0.18-0.07,0.28-0.21,0.2c-0.18-0.1-0.36-0.24-0.48-0.4\n\t\t\t\t\tc-0.2-0.29-0.35-0.6-0.68-0.77c-0.03-0.02-0.03-0.11-0.05-0.19c0.42-0.11,0.91-0.1,1.05-0.66c-0.06-0.09-0.12-0.18-0.2-0.31\n\t\t\t\t\tc0.12,0,0.2,0,0.27,0c0.41-0.73,0.89-0.93,1.41-0.58C99.81,117.96,99.88,118.52,99.39,119.13z\"/>\n\t\t\t\t<path class=\"white\" d=\"M101.51,116.15c0.01,0.36-0.31,0.71-0.68,0.73c-0.36,0.02-0.71-0.3-0.74-0.67\n\t\t\t\t\tc-0.03-0.38,0.32-0.74,0.7-0.75C101.16,115.45,101.5,115.78,101.51,116.15z M101.18,116.16c-0.01-0.2-0.18-0.37-0.38-0.36\n\t\t\t\t\tc-0.2,0.01-0.37,0.18-0.36,0.38c0.01,0.2,0.18,0.37,0.38,0.36C101.02,116.53,101.18,116.36,101.18,116.16z\"/>\n\t\t\t</g>\n\t\t</g>\n\t</g>\n\t<g id=\"REMOVE\">\n\t\t<path id=\"RemoveButton\" class=\"buttonRemove\" d=\"M46.03,123.53H21.11c-2.66,0-4.82-2.16-4.82-4.82v0c0-2.66,2.16-4.82,4.82-4.82h24.92\n\t\t\tc2.66,0,4.82,2.16,4.82,4.82v0C50.85,121.37,48.69,123.53,46.03,123.53z\"/>\n\t\t<text transform=\"matrix(1.0661 0 0 1 23 120)\" class=\"font fontWhite fsize4\">REMOVE</text>\n\t</g>\n\t<g id=\"NEW\">\n\t\t<path id=\"buttonAdd\" class=\"buttonAdd\" d=\"M83.78,123.53H58.86\n\t\t\tc-2.66,0-4.82-2.16-4.82-4.82v0c0-2.66,2.16-4.82,4.82-4.82h24.92c2.66,0,4.82,2.16,4.82,4.82v0\n\t\t\tC88.59,121.37,86.44,123.53,83.78,123.53z\"/>\n\t\t<text transform=\"matrix(1.1527 0 0 1 65 120)\" class=\"font fontWhite fsize4\">NEW</text>\n\t</g>\n</g>\n<g id=\"Current_Info\">\n\t<text transform=\"matrix(0.9535 0 0 1 86.7812 100.4355)\" class=\"font fontBlack fsize10\">{{filament_left}}</text>\n\t<text transform=\"matrix(1.0752 0 0 1 110 107.386)\" class=\"font fontGrey fsize8\">{{filament opened}}d</text>\n</g>\n\n<g id=\"Filament\">\t\n\t\t<image style=\"overflow:visible;\" width=\"100\" height=\"100\" id=\"Filament_Loaded\" xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABmJLR0QA/wD/AP+gvaeTAAAKe0lE\nQVR4nO2dfXAU5R3HP7t3l9wFQl5IQshJAgIJpoCtmGKQiq/xBXyZolbElw4y1pdptdVSqHXqYOtI\nHVDbceqM1VpbtGOlYquiiC3S0IZXpUHEYBLMCwnklZDcbe72dvtHakjg3p7LJbcb9jOTmbt9nt+z\nvzzf3edt9/kdWFhYWFhYWFhYxB8pXKLr2p/kSzb5YdCLAHmEfBqtaJLOQU3T13r/vqYuVKaQgvSJ\nIX0CZAyLe2cuHbpuO9f71i/rgyWGvOplWXoIS4zhIEOWAg+FSgwpiCbpXxsef8zFJe7DrCn9gK9n\nNQ86PmVCBquXXs61JTMGHXcFNJZ90cIth9uw6XrQMjX0maHOZw/timQT8HtUMtbu49WyN3DZVBYW\nHGLmn+/rT3t6+UK+Of0sll0+h/0rj1J7tAOAJbVt3FbTBsBxh51N7rQgJYeuW6ujDoOqy/Sqfdds\ntz9pUFq3txcAvxpA8an9xz32k1XqtYlXb5g7xEIJ2Ln67aVcetZh3qotGpT2gxfeYXFpMXurm2jq\nONF//C8FmXQm2VBkGx/lpgqf0xIkAp91ZPNZR/Zpx9tPeHhh8+7Tjgckiffy0mM+n9VkGYyY75BJ\nWWnMmepmrCspcuYziG6vjz3VjdS3Ho/JPiZB7r16LqtuXIA9hk7rTEANaDzxxlae37RT2Fa4RmcW\nTOCRmy+2xAiD3Sbzs5svoXhSjritqMG8GfnIUtglsLjT2tXD542taFrwiVYkZFlixlnZjE9NibNn\nYc4pScwvLuBA/TEhO2FBUl3JoiZD4suWTi5/9CV6FN+QyhnrSmLL6rvIzw42URseYqkrw7c7u6oa\nhiwG9HW2O6uCrucZCsPPQ7RT14MkCd3pxAbktHf1H07K8ZzMk+xG02WOtJ8YZH9aWQbE8IIMwmZD\nWbAAbdw48hqaefWJl/uTznt9Y//n6uJaJmZmcKD+GItWv4LiV4OVZkiEBamtOsxjT31B9vh07lp6\nDc7kkZuHaGlpaOPGRZ2/eFIOsyfnsvNQwzB6NRil18eL69+lpa2TVl38ehe2qDvcwJ82lwPg8Sr8\n+P5bhE8aK7os3uXZRnh4/usXNvDEM+sBuKhsvrC9sCAFjsr+z/W71pJSfo/wSUVIqpoFLIxTWfeR\nQmXkjEOgYfd0YALQV1e7mSVkb/hR1pmGJYjBEG6yGv1FQN8aTVbxnXhLrou3T4Pw+WtgW0V8ypry\nON6Ss+NSVigyyzdC+Wbgq7oSQ1iQjNw8brh6Prk5mTxwz1L05DHCJxXCcXLVVIphHqFp2oCyxqMn\n58fDq5A8eO8yFL+T5mPt2LKzoKZVyF5YkOLZM3joBvHRQzyQjncheRV0lzOq/E0dJ/hUcC1pqKSn\njeXJR+8GYO3GcjbVlAvZm2piKKl+nP/YgpaWTreq8cOSk1d76ju3nsz4r78RkBxUftlMt3foyy4j\nieEFkU5ZWZb8KrbWVlRgX8aA1dumAU1RU1NUZRkRw4+yZk/OjcuzF4fNxrmTc+Pg0fBi+DukyJ3F\nltXL2FN9hP21jWzYvEPIfnHZXGZOcTNnah6F7qxh8jJ+GF4QgEJ3FoXuLH53opujR8VGLVOy0lhy\n0exh8iz+mEKQr1g4bxa/eLMAnxqIKn+yw87CeWJLF4nGVIJMzEhlw6pb+XBfDf5AnyivfrCLY619\nr3HmZGVw6xUlQF+fcdm5ZzMxQ/xltURiKkEA5kx1M2equ//7B9v20tjZCUC2O4tHbro4Ua7FBdMJ\ncio3XlXK58cVAG66qjTB3gwd0wuyvKwENaAhSRLLy0oS7c6QMb0gToedB6+7MNFuxA3DTwzPNEaF\nIP6GNtTGtkS7ERdML0jP1kpq5q2gunQFPVuH9/HsSGB6QVqe3ICuBtDVAC1r/ppod4aMqQXRFD9K\n5Zf935X/HkZT/An0aOiYWhDZ6cA1t7D/e8oFRchORwI9GjqmH/ZOeuVBOtdvAyD9tgUJ9mbomF4Q\neayLzO9dmWg34oapm6zRiCWIwbAEMRiWIAbDEsRgWIIYDNMPe0OhA2sOtlLR5g2abpclbi9I4/o8\nYz3iHbWCVLR5efJg+DdUylt6uGZRIQ7ZOC/Qjdomq90X+c0URdPxBIy1EXTUCmJWLEEMxqgVZNpY\nB5G6hjynnXEOY1WBOTt1TcF+7DUkNXgIJN2eTlHOEjY5vNTtOESwECkOh8zsG+aGD1ycAEwpiKNu\nDY6Gp8Pm8X1eQ9rd9cwKF7Dmze2wZx0YaJuCse7XKJG9VRHz+A/VEPTWGIDa3IF2Ivg8JVGYUpDR\njCWIwTClILo9M2IeOSNyXCzJlYQ0wvG/IjEsnXpVXTPjxrjIHR9DsDCtF1v3x6App6dJNrQxM/Hn\nr0Q73g5KiB22zhySFv0Ue8PH7KtuQQvSZydLcOEVs5Ec4gG8m9uO09XjpTA//lvk4i7IH97ZzgNr\n1+NMcvDP51dyzuSJQvbO/dcjd4UOFKA7xtN88FmaVjkAd8h89nW1lE0vor1gWsg8F6S6eE/IO/i0\nppHL7vsVis/Pbx6+jduvmSdYQnji3mRt2fkpAIrPz7a9B4VspUB3WDEAJH8bPR9Gjuywo7I+4npW\nRbuXblULm+dUyj+pQvH1vfu1ecd+IdtoiLsgAwNVCses1KPbqqZHUbCqRze3EF1bHHjqWINyhsOU\nnfpoZlgFUXyCURTkZJAiuxTN24kue+Q7RJYg2SY2Sxf+nwQZVkFee38HNY0tUefXZSf+vPtBDhE2\nUJIJpC8g/a7F2HNCj+DsE9K5YuF5XJSdEnKBMUmW+P60TJwCD6dqGlt47X2xffKixH2UNXCoW1XX\nzHm3/zyGUm6MkP5byAQyQwVG9sGqCGtdwLP//4uVvOzYfwUhFHG/QxZfej6ygR6JDheyLPHtS86P\nf7nxLnDe7Gk8t+IOstKN9fJAPMlKT+W5FXdQOmtq3MsWbrI6uiOvji4pm8uSsrk0tnTgPyXqwoWv\n70bxm2MPh9PhYPvNg+8Ch92GOzu6H69rj2ElWViQj/bX0utXSXZENg3qeEY6AZ85BCHJweSJsQWs\n6fWrbN1fI2wnLEh1czs/evFd1tx5VUw/5pKZm02PxxyCZKbEtvmn2+tjxcvv9f9ymwgxjbLerDjA\npj1VFOfnMMYpJkqecwy5BnpCFw5Z1/nOvl1CNj2KjwN1x2IObx7zsFfxq+ytPhKruUUIrKUTgxFS\nEAk8odIshka4ug1zh+j/GQ5nLABd3x4qKaQgnoBrHTrxCSltcRKdCo/meiZUcvjhzsWP2VPSexeh\n8w1d1pMBVI9njqYo08OZybJNsaenbQyXZzShdnVdqalq2NmibE+qc6SmrvN0Jr/N1sdCDsGEx5+2\n+cu3BjyesBvCJbtN1Xf+0dw7+AWQS7/bofX6wq40yk7nF9q/Xwp7IUMMw97k8ZnlemZmeEHgyJk0\nIkjOzqkEvhU+l1QRzUKK+DxEktUo5nViD6rNjiwHomhqopopWvMQgyEsiA5RRDKWxKIdmxwJIkZP\n0yU9qjoRbrK8HvX3KSn2c4DCoBkkPAQCj4uWa2YCGivtMpoOwUdaEkdsBJ4aYbcsLCwsLCwsLCz6\n+R9F2Rnz47AX4gAAAABJRU5ErkJggg==\" transform=\"matrix(0.4779 0 0 0.4779 26.9516 56.2676)\">\n\t</image>\n</g>\n\t\t\n<g id=\"Print_Brief\">\n\t<path id=\"box\" class=\"greyBorder\" d=\"M117.9,77.38H92.82c-0.85,0-1.53-0.69-1.53-1.53V63.14c0-0.85,0.69-1.53,1.53-1.53h25.08\n\t\tc0.85,0,1.53,0.69,1.53,1.53v12.71C119.43,76.7,118.75,77.38,117.9,77.38z\"/>\n\t<text transform=\"matrix(0.9174 0 0 1 95.3551 68.1945)\" class=\"font fontBlack fsize4\">H: {{filament_print_hotend}} C</text>\n\t<text transform=\"matrix(0.9174 0 0 1 95.8707 74.6916)\" class=\"font fontBlack fsize4\">B: {{filament_print_bed}} C</text>\n</g>\n<g id=\"Filament_info\">\n\t<g id=\"type\">\n\t\t<rect x=\"91.19\" y=\"50.86\" class=\"grey\" width=\"29\" height=\"6.8\"/>\n\t\t<text transform=\"matrix(1.0923 0 0 1 94.1143 56.20)\" class=\"font fsize5 fontWhite\">{{filament_type}}</text>\n\t</g>\n\t<g id=\"name\">\n\t\t<rect x=\"25.82\" y=\"42.3\" class=\"greyBorder\" width=\"93.71\" height=\"8.57\"/>\n\t\t<text transform=\"matrix(1.342 0 0 1 58.5958 49.1513)\" class=\"font fsize7 fontBlack\">{{filament_brand}}</text>\n\t</g>\n</g>\n<g id=\"Box_Name\">\n\t\t<g id=\"colour_bar\">\n\t\t\t<path id=\"box_colour\" class=\"box{{boxID}}\" d=\"M116.63,27.6H28.29\n\t\t\t\tc-1.48,0-2.69-1.2-2.69-2.69v-8.62c0-1.48,1.2-2.69,2.69-2.69h88.34c1.48,0,2.69,1.2,2.69,2.69v8.62\n\t\t\t\tC119.31,26.4,118.11,27.6,116.63,27.6z\"/>\n\t\t\t<text transform=\"matrix(1.0876 0 0 1 32.6468 23.3213)\" class=\"font fsize10 fontWhite\">{{box_name}}</text>\n\t\t</g>\n\t<g id=\"Box_Data\">\n\t\t<g id=\"humidity\">\n\t\t\t<text transform=\"matrix(1.0965 0 0 1 67.4373 36)\" class=\"font fontBlack fsize6\">{{box_humidity}}%</text>\n\t\t\t<g>\n\t\t\t\t<path d=\"M64.77,35.58c-0.26-0.13-0.51-0.27-0.64-0.54c-0.05-0.1-0.08-0.2-0.12-0.28c-0.31,0.04-0.61,0.11-0.91,0.11\n\t\t\t\t\tc-1.17,0.01-2.12-0.96-2.16-2.13c-0.04-1.15,0.79-2.07,1.77-2.26c1.14-0.22,2.3,0.51,2.55,1.64c0.05,0.2,0.04,0.42,0.06,0.63\n\t\t\t\t\tc0.01,0.11,0.02,0.22,0.07,0.32c0.21,0.4,0.43,0.8,0.64,1.2c0,0.17,0,0.34,0,0.51c-0.13,0.39-0.39,0.66-0.76,0.81\n\t\t\t\t\tC65.11,35.58,64.94,35.58,64.77,35.58z M64.73,32.6c-0.02-0.1-0.03-0.23-0.06-0.35c-0.2-0.81-0.93-1.26-1.64-1.19\n\t\t\t\t\tc-0.96,0.09-1.54,0.9-1.43,1.86c0.11,0.95,1.26,1.73,2.33,1.12c0.16-0.09,0.29-0.2,0.36-0.37c0.06-0.15,0.15-0.29,0.25-0.41\n\t\t\t\t\tC64.68,33.06,64.7,32.84,64.73,32.6z M65.05,32.85c-0.14,0.22-0.26,0.37-0.35,0.54c-0.16,0.31-0.33,0.63-0.44,0.96\n\t\t\t\t\tc-0.14,0.43,0.15,0.87,0.6,0.99c0.41,0.11,0.82-0.15,0.95-0.59c0.08-0.25,0.02-0.48-0.09-0.69\n\t\t\t\t\tC65.51,33.67,65.28,33.28,65.05,32.85z M65.12,32.54c-0.04-0.91-0.67-1.65-1.53-1.85c-0.86-0.2-1.74,0.19-2.17,0.95\n\t\t\t\t\tc-0.44,0.77-0.3,1.78,0.3,2.4c0.6,0.61,1.52,0.78,2.28,0.4c0-0.06,0-0.12,0-0.19c-1.34,0.59-2.35-0.26-2.58-1.11\n\t\t\t\t\tc-0.29-1.07,0.36-2.12,1.43-2.29c1.09-0.18,2.01,0.62,2.08,1.68C64.99,32.54,65.05,32.54,65.12,32.54z\"/>\n\t\t\t\t<path d=\"M63.85,31.84c-0.43-0.41-1.06-0.34-1.42-0.01c-0.25,0.23-0.37,0.53-0.35,0.86c0.02,0.32,0.15,0.61,0.42,0.83\n\t\t\t\t\tc-0.06,0.06-0.1,0.09-0.13,0.13c-0.48-0.25-0.69-1.17-0.28-1.75c0.38-0.54,1.22-0.8,1.93-0.21c0.05-0.02,0.11-0.05,0.22-0.1\n\t\t\t\t\tc-0.01,0.12-0.01,0.21-0.02,0.33c0.33,0.69,0.25,1.33-0.28,1.73c-0.04-0.03-0.08-0.06-0.14-0.1c0.41-0.45,0.55-0.94,0.23-1.54\n\t\t\t\t\tc-0.22,0.24-0.48,0.42-0.63,0.69c-0.1,0.17-0.26,0.22-0.4,0.12c-0.16-0.12-0.14-0.38,0.05-0.44\n\t\t\t\t\tC63.37,32.29,63.57,32.01,63.85,31.84z\"/>\n\t\t\t\t<path d=\"M64.72,35.05c-0.28-0.18-0.37-0.42-0.25-0.75c0.08-0.23,0.21-0.44,0.33-0.65c0.01-0.02,0.07,0,0.15,0\n\t\t\t\t\tc-0.02,0.09-0.04,0.16-0.06,0.22c-0.04,0.1-0.1,0.2-0.14,0.3c-0.16,0.36-0.15,0.42,0.08,0.77\n\t\t\t\t\tC64.78,34.97,64.75,35.01,64.72,35.05z\"/>\n\t\t\t</g>\n\t\t</g>\n\t\t<g id=\"temp\">\n\t\t\t<text transform=\"matrix(1.0204 0 0 1 39.9519 36)\" class=\"font fontBlack fsize6\">{{box_temperature}}</text>\n\t\t\t<g>\n\t\t\t\t<path d=\"M35.04,32.51c0-0.46,0.02-0.92-0.01-1.38c-0.03-0.5,0.43-0.89,0.84-0.9c0.81,0,1.62-0.01,2.43,0\n\t\t\t\t\tc0.33,0.01,0.58,0.17,0.74,0.49c0.08,0.17,0.11,0.32,0.11,0.5c0,0.9,0,1.8,0,2.7c0,0.46-0.39,0.92-0.89,0.92\n\t\t\t\t\tc-0.77,0-1.54,0-2.32,0c-0.47,0-0.94-0.39-0.91-0.93C35.06,33.45,35.04,32.98,35.04,32.51z M38.91,32.53\n\t\t\t\t\tC38.91,32.53,38.91,32.53,38.91,32.53c0-0.51,0-1.02,0-1.53c0-0.18-0.04-0.34-0.19-0.44c-0.17-0.11-0.35-0.2-0.57-0.2\n\t\t\t\t\tc-0.46,0.01-0.92,0-1.38,0c-0.26,0-0.53-0.02-0.79,0c-0.49,0.04-0.73,0.28-0.7,0.71c0.01,0.22,0,0.45,0,0.68\n\t\t\t\t\tc0,0.74,0,1.49,0,2.23c0,0.38,0.14,0.56,0.5,0.65c0.12,0.03,0.25,0.04,0.38,0.05c0.63,0,1.25,0,1.88,0\n\t\t\t\t\tc0.12,0,0.24-0.01,0.35-0.04c0.45-0.12,0.54-0.31,0.53-0.65C38.91,33.51,38.91,33.02,38.91,32.53z\"/>\n\t\t\t\t<path d=\"M37.51,32.2c0,0.2,0,0.39,0,0.59c0,0.2,0.01,0.37,0.15,0.54c0.22,0.28,0.05,0.66-0.29,0.77\n\t\t\t\t\tc-0.4,0.12-0.75-0.02-0.9-0.38c-0.04-0.1-0.05-0.2,0.05-0.29c0.21-0.19,0.24-0.44,0.23-0.72c-0.02-0.44-0.01-0.88,0-1.32\n\t\t\t\t\tc0-0.31,0.15-0.43,0.45-0.38c0.22,0.03,0.31,0.13,0.31,0.35C37.52,31.63,37.51,31.92,37.51,32.2z M37.19,31.69\n\t\t\t\t\tc0.09-0.12,0.08-0.24,0.08-0.37c0-0.1-0.03-0.18-0.15-0.18c-0.11,0.01-0.14,0.09-0.14,0.19c0,0.32,0,0.65,0,0.97\n\t\t\t\t\tc0,0.3,0,0.6,0,0.9c-0.05,0.03-0.09,0.05-0.12,0.07c-0.16,0.1-0.21,0.25-0.17,0.43c0.04,0.17,0.17,0.21,0.31,0.27\n\t\t\t\t\tc0.14,0.05,0.25-0.01,0.36-0.06c0.22-0.09,0.29-0.45,0.08-0.57c-0.15-0.09-0.2-0.19-0.19-0.35c0-0.03-0.03-0.05-0.09-0.14\n\t\t\t\t\tc0.01,0.26-0.1,0.46,0.1,0.63c0.08,0.07,0.06,0.16-0.01,0.23c-0.07,0.08-0.15,0.1-0.23,0.04c-0.06-0.04-0.11-0.1-0.18-0.16\n\t\t\t\t\tc0.16-0.11,0.18-0.25,0.18-0.42c-0.01-0.47,0-0.94,0-1.41c0-0.09-0.03-0.19,0.07-0.3C37.14,31.55,37.17,31.62,37.19,31.69z\"/>\n\t\t\t\t<path d=\"M37.94,30.66c-0.09,0-0.19,0.01-0.28,0.01c-0.51,0-1.02,0-1.53,0c-0.11,0-0.22,0.01-0.31,0.05\n\t\t\t\t\tc-0.2,0.07-0.31,0.19-0.31,0.43c0.01,0.91,0,1.82,0.01,2.73c0,0.28,0.12,0.42,0.41,0.47c0.12,0.02,0.23,0.04,0.35,0.04\n\t\t\t\t\tc0.61-0.01,1.23-0.01,1.84-0.04c0.34-0.02,0.43-0.14,0.44-0.49c0-0.4,0-0.8,0-1.2c0-0.09,0.01-0.19,0.01-0.31\n\t\t\t\t\tc0.08,0.03,0.14,0.04,0.15,0.07c0.02,0.06,0.02,0.13,0.02,0.2c0,0.39,0,0.78,0,1.17c0,0.37-0.24,0.64-0.61,0.69\n\t\t\t\t\tc-0.07,0.01-0.14,0.01-0.2,0.01c-0.59,0-1.17,0-1.76,0c-0.12,0-0.25-0.03-0.37-0.06c-0.29-0.08-0.4-0.29-0.4-0.57\n\t\t\t\t\tc0-0.03,0-0.06,0-0.09c0-0.82,0-1.64,0-2.47c0-0.56,0.15-0.71,0.71-0.72c0.55-0.01,1.1,0,1.64,0c0.06,0,0.13,0.02,0.19,0.03\n\t\t\t\t\tC37.94,30.62,37.94,30.64,37.94,30.66z\"/>\n\t\t\t</g>\n\t\t</g>\n\t\t<g id=\"desiccant\">\n\t\t\t<g>\n\t\t\t\t<path class=\"st30\" d=\"M90.17,29.71c0,0.19-0.01,0.38-0.01,0.58c-0.29,0-0.58,0-0.87,0c0-0.19-0.01-0.38-0.01-0.58\n\t\t\t\t\tC89.57,29.71,89.87,29.71,90.17,29.71z\"/>\n\t\t\t\t<path d=\"M89.29,30.29c0.29,0,0.58,0,0.87,0c0.25,0.07,0.49,0.14,0.74,0.21c0.22,0.16,0.45,0.33,0.67,0.49\n\t\t\t\t\tc0.48,0.52,0.74,1.12,0.73,1.84c-0.02,1.18-0.87,2.17-2.05,2.4c-0.71,0.14-1.34-0.03-1.97-0.39c-1.23-0.71-1.57-2.62-0.45-3.78\n\t\t\t\t\tc0.02-0.02,0.03-0.04,0.05-0.07c0.24-0.16,0.49-0.33,0.73-0.49C88.83,30.43,89.06,30.36,89.29,30.29z M89.72,32.4\n\t\t\t\t\tc0-0.48,0-0.96,0-1.44c-0.82-0.05-1.61,0.63-1.81,1.3c-0.27,0.86,0.11,1.58,0.87,2.08c0.73,0.47,1.76,0.25,2.22-0.23\n\t\t\t\t\tc-0.35-0.35-0.7-0.7-1.05-1.05c0.21-0.17,0.41-0.33,0.62-0.5c0.14-0.11,0.3-0.21,0.44-0.33c0.04-0.04,0.05-0.12,0.07-0.19\n\t\t\t\t\tc-0.07-0.02-0.14-0.04-0.21-0.05c-0.03,0-0.07,0.02-0.1,0.04C90.41,32.15,90.07,32.27,89.72,32.4z M91.25,33.16\n\t\t\t\t\tc-0.02,0.01-0.04,0.01-0.06,0.02c0.02,0.17,0.04,0.35,0.07,0.52c0.01,0.03,0.08,0.07,0.13,0.07c0.12,0,0.4-0.26,0.45-0.41\n\t\t\t\t\tc-0.07,0-0.14,0-0.15,0c0-0.28,0.01-0.55,0-0.82c-0.03-0.63-0.58-1.35-1.17-1.52C90.43,31,90.33,31.01,90.25,31\n\t\t\t\t\tc-0.01,0.02-0.03,0.05-0.04,0.07c1.08,0.39,1.46,1.15,1.25,2.26C91.36,33.25,91.31,33.21,91.25,33.16z\"/>\n\t\t\t\t<path class=\"st31\" d=\"M88.61,30.5c-0.24,0.16-0.49,0.33-0.73,0.49c-0.1-0.15-0.19-0.31-0.31-0.49c0.24-0.16,0.47-0.3,0.74-0.48\n\t\t\t\t\tC88.41,30.19,88.51,30.35,88.61,30.5z\"/>\n\t\t\t\t<path class=\"st31\" d=\"M91.57,30.99c-0.22-0.16-0.45-0.33-0.67-0.49c0.1-0.15,0.19-0.31,0.3-0.48c0.24,0.17,0.44,0.32,0.68,0.48\n\t\t\t\t\tC91.77,30.67,91.67,30.83,91.57,30.99z\"/>\n\t\t\t\t<path class=\"st32\" d=\"M89.95,33.05c0.35,0.35,0.7,0.7,1.05,1.05c-0.46,0.49-1.5,0.71-2.22,0.23c-0.76-0.5-1.14-1.22-0.87-2.08\n\t\t\t\t\tc0.21-0.67,1-1.35,1.81-1.3c0,0.48,0,0.96,0,1.44c-0.05,0.03-0.11,0.07-0.16,0.1c-0.15,0.1-0.21,0.22-0.14,0.4\n\t\t\t\t\tc0.07,0.17,0.21,0.24,0.4,0.19C89.87,33.08,89.91,33.07,89.95,33.05z\"/>\n\t\t\t\t<path class=\"st2\" d=\"M91.25,33.16c0.06,0.05,0.11,0.1,0.2,0.17c0.22-1.11-0.16-1.87-1.25-2.26c0.01-0.02,0.03-0.05,0.04-0.07\n\t\t\t\t\tc0.09,0.01,0.18,0,0.26,0.03c0.59,0.17,1.14,0.89,1.17,1.52c0.01,0.27,0,0.53,0,0.82c0.02,0,0.08,0,0.15,0\n\t\t\t\t\tc-0.05,0.15-0.33,0.41-0.45,0.41c-0.04,0-0.12-0.04-0.13-0.07c-0.03-0.17-0.05-0.35-0.07-0.52\n\t\t\t\t\tC91.21,33.17,91.23,33.16,91.25,33.16z\"/>\n\t\t\t</g>\n\t\t\t<text transform=\"matrix(1.0067 0 0 1 93.4485 36)\" class=\"font fontBlack fsize6\">{{box_dissecant_age}}d</text>\n\t\t</g>\n\t</g>\n</g>\n</svg>",
+        "output": "str",
+        "x": 650,
+        "y": 960,
+        "wires": [
+            [
+                "7b7a5ea5980e710a"
+            ]
+        ]
+    },
+    {
+        "id": "a218f003a336ea27",
+        "type": "mqtt in",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "Filament Loaded",
+        "topic": "ender/event/plugin_spoolmanager_spool_selected",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "6e117ba5.8026e4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "ae7cd92f475157f0"
+            ]
+        ]
+    },
+    {
+        "id": "aae6c3c28cecf4b7",
+        "type": "change",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "name": "Selected spool",
+        "rules": [
+            {
+                "t": "set",
+                "p": "table_selected",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1580,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "639a8f02e3329767",
+        "type": "mqtt in",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "Filament Unloaded",
+        "topic": "ender/event/plugin_spoolmanager_spool_deselected",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "6e117ba5.8026e4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 360,
+        "wires": [
+            [
+                "9d94a6bfe602dec5"
+            ]
+        ]
+    },
+    {
+        "id": "1f6214a26d4fe312",
+        "type": "switch",
+        "z": "7b277ca144864600",
+        "g": "0b21ca30572b76cf",
+        "name": "BoxID",
+        "property": "boxID",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 1010,
+        "y": 920,
+        "wires": [
+            [
+                "a4ced0c9bb1a5050"
+            ],
+            [
+                "19bab2118baf82fb"
+            ],
+            [
+                "153a03c1f5905010"
+            ],
+            [
+                "5dd18b657827cf13"
+            ]
+        ]
+    },
+    {
+        "id": "5669bd231a3a44d3",
+        "type": "inject",
+        "z": "7b277ca144864600",
+        "g": "66b1e4d6a94da8ba",
+        "name": "Every Hour",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "923707abc68b08dc"
+            ]
+        ]
+    },
+    {
+        "id": "923707abc68b08dc",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "66b1e4d6a94da8ba",
+        "name": "Desiccant counter",
+        "func": "// one hour is 3600 sec or 3600000 ms\n// the date is calculated as EPOCH time and then display as \n//offset of days since in the UI\n\nvar boxes = flow.get(\"boxes\");\n\n\n// reset routine has to set the current time, if not set - present date is used\n\nfor(let c = 0; c < boxes.length; c++){\n    if(boxes[c].desiccant_reset == 0){\n        \n        boxes[c].desiccant_reset = Date.now();\n        \n    }\n    else{\n    let x = boxes[c].desiccant_reset + 3600000;\n    boxes[c].desiccant_reset = x;\n    }\n}\n\nflow.set(\"boxes\", boxes)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "57af65e1b57508d0",
+        "type": "mqtt in",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Box 1 T&H",
+        "topic": "/box/",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "6e117ba5.8026e4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 740,
+        "y": 380,
+        "wires": [
+            [
+                "24c5084248330f09"
+            ]
+        ]
+    },
+    {
+        "id": "6ff8774d37357e1a",
+        "type": "mqtt in",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Box 2 T&H",
+        "topic": "/box/",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "6e117ba5.8026e4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 740,
+        "y": 420,
+        "wires": [
+            [
+                "7ba08aeb8af358c2"
+            ]
+        ]
+    },
+    {
+        "id": "9d4d70757fb09253",
+        "type": "mqtt in",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Box 3 T&H",
+        "topic": "/box/",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "6e117ba5.8026e4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 740,
+        "y": 460,
+        "wires": [
+            [
+                "527fb98b75139412"
+            ]
+        ]
+    },
+    {
+        "id": "d90cf52f1c4bf689",
+        "type": "mqtt in",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Box 4 T&H",
+        "topic": "/box/",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "6e117ba5.8026e4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 740,
+        "y": 500,
+        "wires": [
+            [
+                "7a80a3d1695cfa52"
+            ]
+        ]
+    },
+    {
+        "id": "24c5084248330f09",
+        "type": "change",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Box 1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "boxID",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 380,
+        "wires": [
+            [
+                "ced1d76aad937086"
+            ]
+        ]
+    },
+    {
+        "id": "7ba08aeb8af358c2",
+        "type": "change",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Box 2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "boxID",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 420,
+        "wires": [
+            [
+                "ced1d76aad937086"
+            ]
+        ]
+    },
+    {
+        "id": "527fb98b75139412",
+        "type": "change",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Box 3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "boxID",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 460,
+        "wires": [
+            [
+                "ced1d76aad937086"
+            ]
+        ]
+    },
+    {
+        "id": "7a80a3d1695cfa52",
+        "type": "change",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Box 4",
+        "rules": [
+            {
+                "t": "set",
+                "p": "boxID",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 500,
+        "wires": [
+            [
+                "ced1d76aad937086"
+            ]
+        ]
+    },
+    {
+        "id": "ae7cd92f475157f0",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "look up boxes",
+        "func": "var spoolID = msg.payload.databaseId;\nvar boxes = flow.get(\"boxes\");\n\nvar boxID;\nnode.warn(boxID)\nvar box = boxes.find((o, i) =>{\n    if(o.filamentID === spoolID){\n        boxID = i;\n        node.warn(boxID);\n    }\n});\n\n//spoool manager doesnt have databaseID on unload, so we have to track \n//changes\nflow.set(\"loaded_filamentID\", spoolID);\n\nif(boxID !== undefined){\n\n    boxes[boxID].box_template = \"loaded\";\n    node.warn(boxes[boxID].box_template);\n    flow.set(\"boxes\", boxes);\n}\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "2ba5c99edd024d3c"
+            ]
+        ]
+    },
+    {
+        "id": "c80c3f60fc1d1139",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Get Status & SwitchBot API Settings",
+        "func": "var deviceID =  msg.payload; \n\nmsg.headers = {\"Authorization\": flow.get(\"SwitchBotAPI\"),\n               \"ContentType\": \"application/json; charset=utf8\"};\n                \nmsg.url = \"https://api.switch-bot.com/v1.0/devices/\"+ deviceID +\"/status\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 160,
+        "wires": [
+            [
+                "be38299206626d90"
+            ]
+        ]
+    },
+    {
+        "id": "ddcf5b68c9c5f359",
+        "type": "inject",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Box 1 (Meter Plus 2)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "boxID",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 800,
+        "y": 100,
+        "wires": [
+            [
+                "c80c3f60fc1d1139"
+            ]
+        ]
+    },
+    {
+        "id": "be38299206626d90",
+        "type": "http request",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Status",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 1330,
+        "y": 160,
+        "wires": [
+            [
+                "cee49264944a1140"
+            ]
+        ]
+    },
+    {
+        "id": "8d64a0402e89a8c6",
+        "type": "inject",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Box 3 (Meter 1)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "boxID",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 790,
+        "y": 180,
+        "wires": [
+            [
+                "c80c3f60fc1d1139"
+            ]
+        ]
+    },
+    {
+        "id": "ade5daf6705a1205",
+        "type": "inject",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Box 2  (Meter Plus 1)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "boxID",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 800,
+        "y": 140,
+        "wires": [
+            [
+                "c80c3f60fc1d1139"
+            ]
+        ]
+    },
+    {
+        "id": "1f79fc85dff7e7c6",
+        "type": "inject",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Box 4 (Meter 2)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "boxID",
+                "v": "3",
+                "vt": "num"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 790,
+        "y": 220,
+        "wires": [
+            [
+                "c80c3f60fc1d1139"
+            ]
+        ]
+    },
+    {
+        "id": "e9c6f8f14adf916b",
+        "type": "comment",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Add your SwitchBot Meters here - one input node for each box. [more]",
+        "info": "You can define the frequency of the temperature updates by adjusting interval in each box. I suggest 5-10 min updates.\n\nEach temperature node has a SwitchBot Device ID and boxID which is a number 0 indexed corresponding with the boxes. \n\nYou can use the REST call to get your Meter and Meter Plus devices, these will be saved in devices context",
+        "x": 1310,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "cee49264944a1140",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Update Boxes",
+        "func": "var temp = msg.payload.body.temperature;\nvar humid = msg.payload.body.humidity;\nvar boxID = msg.boxID;\n\n\n//update boxes\nif(msg.payload.message === \"success\"){\n    var boxTemp = \"boxes\" + \"[\"+boxID+\"]\"+\".temperature\";\n    flow.set(boxTemp, temp);\n    var boxHumid = \"boxes\" + \"[\"+boxID+\"]\"+\".humidity\";\n    flow.set(boxHumid, humid);\n    \n}\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1500,
+        "y": 160,
+        "wires": [
+            [
+                "59bac512360f3a97"
+            ]
+        ]
+    },
+    {
+        "id": "ced1d76aad937086",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Update Boxes",
+        "func": "var boxID = msg.boxID;\nvar temp = msg.payload.temperature;\nvar humid = msg.payload.humidity;\n\n\nvar boxTemp = \"boxes\" + \"[\"+boxID+\"]\"+\".temperature\";\nflow.set(boxTemp, temp);\nvar boxHumid = \"boxes\" + \"[\"+boxID+\"]\"+\".humidity\";\nflow.set(boxHumid, humid);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 440,
+        "wires": [
+            [
+                "fb762b8b0d013be1"
+            ]
+        ]
+    },
+    {
+        "id": "ea2abcf7a2d53252",
+        "type": "comment",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "Add your ZigBee sensors here [more]",
+        "info": "Add your ZigBee sensors here (one per each box). and assign boxID for each box - the id is a zero indexed number of boxes in the boxes array\n",
+        "x": 1390,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "7217a7384df7e3ce",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "name": "Settings * - start here",
+        "func": "// see On Start tab for configuration\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started. \n\n// Sout SwitchBot API goes here. Go to the Switchbot app \n//and tap 10 times on app version number to generate API token\nflow.set(\"SwitchBotAPI\",\"API HERE\");\n\n\n//how would you like your filament amount to be displayed\n\nvar unit = \"meters\"     //possible options: meters/grams/percent/feet\nvar temp_unit = \"C\"  //possible options: C/F\nflow.set(\"units\", unit);\nflow.set(\"temp_units\",temp_unit);\n \nvar test =  flow.get(\"boxes\");\n   \nif(test === undefined){ \nvar boxes= [];\n\n// define number of boxes and their colours add names id\nvar box_no = 4;\nvar box_colour = [\"red\", \"black\", \"green\", \"blue\"];  //can be HEX values\nvar names = [\"Red Storage\", \"White Storage\", \"Green Storage\", \"Blue Storage\"];\n\n\n//create the array of boxes needed to hold all open spools. Each box \n//stores filamentID from spool manager\n\nfor(let c = 0; c < box_no; c++){\n    let box_name = names[c];\n    if(box_name === undefined){box_name = box_colour[c] + \" \" + c}\n    \n    let box = {\n        \"boxID\" : c,\n        \"colour\" : box_colour[c],\n        \"name\" : box_name,\n        \"box_template\": \"empty\",\n        \"filamentID\": null,\n        \"desiccant_reset\" : 0,\n        \"temperature\" : null,\n        \"humidity\" :null,\n        \"temperature_alarm\" :null,\n        \"humidity_alarm\": null,\n        \"alarm\": false,\n    }\n    boxes.push(box);\n} \nflow.set(\"boxes\", boxes);\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b15602cc3da7811b",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "name": "Mirror Spools from db",
+        "func": "// this mirrors the state of the db in the local flow. This is raw data\n// and will be assigned read from\n\n\n//functions\n\nfunction calcPercent(full, used){\n    let left = Math.round((100*used)/full, 2)\n    return left;\n}\n\n//process\n\nvar spools = msg.payload;\nflow.set(\"spools\", spools);\n\n// process the db and format it for the table ony (selected fields)\n//you can edit these and add other fields to the table, simply look up spools context\n//for data\n\nvar array =[];\n\nfor(var i = 0; i < spools.length; i++){\n    //only add spools to the table that have filament \n    if(spools[i].remainingWeight > 0){\n    let spool = {\n        \"spoolID\":     spools[i].databaseId,\n        \"type\":        spools[i].material,\n        \"colour_name\": spools[i].colorName,\n        \"colour_hex\":  spools[i].color,\n        \"usage\":       calcPercent(spools[i].totalWeight, spools[i].usedWeight),\n        \"cost\":        spools[i].cost,\n        \"shop\":        spools[i].purchasedFrom,\n    }\n    \n    array.push(spool);\n    }\n}\n\nmsg.payload = array;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 660,
+        "wires": [
+            [
+                "458a66cbc94d4753"
+            ]
+        ]
+    },
+    {
+        "id": "458a66cbc94d4753",
+        "type": "ui_table",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "group": "01a13e238c184c9e",
+        "name": "All Spools Table",
+        "order": 2,
+        "width": 24,
+        "height": 6,
+        "columns": [],
+        "outputs": 1,
+        "cts": true,
+        "x": 1380,
+        "y": 660,
+        "wires": [
+            [
+                "aae6c3c28cecf4b7",
+                "11ed2c56ddfae358"
+            ]
+        ]
+    },
+    {
+        "id": "bf507b708116bdfc",
+        "type": "exec",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "command": "sudo cp /home/pi/SpoolDB/spoolmanager.db ./spoolmanager1.db",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "copy db",
+        "x": 620,
+        "y": 660,
+        "wires": [
+            [],
+            [],
+            [
+                "50202422d07d9e90"
+            ]
+        ]
+    },
+    {
+        "id": "11ed2c56ddfae358",
+        "type": "ui_button",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "name": "Selected spool",
+        "group": "01a13e238c184c9e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Selected {{msg.payload.type}} {{msg.payload.colour_name}} ",
+        "tooltip": "Add selected filament to box",
+        "color": "white",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1580,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "09070c76de755d2b",
+        "type": "inject",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "trigger on load",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "b8430307f635fa9b"
+            ]
+        ]
+    },
+    {
+        "id": "9a6090af8f7b27ba",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "Scheduled UI update",
+        "func": "// trigger all box visual update for enviromental data and spool updates\n\nvar boxes = flow.get(\"boxes\");\nvar spools = flow.get(\"spools\");\nvar msg = [];\nvar time = new Date();\nvar unit = flow.get(\"units\");\nvar temp_unit = flow.get(\"temp_units\");\n\n//functions\n\n//fill empty values with string space\nfunction neverEmpty(x){\n    if(x === undefined){\n        x = \" \";\n    }\n    return x;\n}\n\nfunction nullIsZero(x){\n    if(x === null){\n        x = 0;\n    }\n    return x;\n}\n\n//dashboard value for remaining filament\n\nfunction filamentLeft(total, used){\n    let left;\n    if(unit === \"meters\"){\n        left = Math.round((total - used)/1000) + \"m\";\n    }\n    if(unit === \"feet\"){\n        left = Math.round((total - used)/1000*3.281,1) +\"ft\";\n    }\n    if(unit === \"percent\"){\n        left = total = (100 - Math.round((100* used) / total)) + \"%\"; \n               \n    }\n    if(unit === \"grams\"){\n        left = Math.round((total - used),1) + \"g\";\n    }\n    return left;\n}\n\nfunction tempCalc(temp, temp_unit){\n    let t;\n    if(temp_unit === \"F\"){\n        t = Math.round((temp *9/5) + 32);\n        return t + \"℉\"\n;    }\n    t = temp + \"℃\"; \n    return t;\n}\n\n// calculate the age of the dissecant\nfunction days(start, end){\n   let y = Math.round(Math.abs((start - end) / 86400000));\n   return y;\n}\n\nfunction filamentage(purchasedOn){\n    let age;\n    if(purchasedOn === undefined){\n        let age = \"not set\";\n        return age;\n    }\n    age = Date.parse(purchasedOn);\n    let now = time;\n    let filage = now.getTime() - age;\n    let finalage = Math.round(Math.abs((filage) / 86400000));\n    return finalage;\n}\n\n\n\nfor( var i =0; i < boxes.length; i++)\n    {\n        \n        var spool_index;\n        //determine which spool is loaded\n        let sp = spools.find((o,z)=>{\n            if(o.databaseId === boxes[i].filamentID){\n               spool_index = z;\n            }\n        })\n        \n        let spool = spools[spool_index];\n        let elapsed = days(boxes[i].desiccant_reset, time);\n        \n        var filament_left;\n        var box;\n        \n        //calc percent and lenght\n        if(spool_index !== undefined){\n            \n            if(unit === \"meters\" || unit === \"feet\" ){\n                if(spool.totalLength === undefined){\n                    filament_left = \"not provided\";\n                }\n                else{\n                    filament_left = filamentLeft(nullIsZero(spool.totalLength), nullIsZero(spool.usedLength))\n                }\n            }\n            if(unit === \"grams\"){\n                if(spool.totalWeight === undefined){\n                    filament_left = \"not provided\";\n                }\n                else{\n                    filament_left = filamentLeft(nullIsZero(spool.totalWeight), nullIsZero(spool.usedWeight))\n                }\n            }\n            if(unit === \"percent\"){\n                filament_left = filamentLeft(nullIsZero(spool.totalWeight), nullIsZero(spool.usedWeight))\n            }\n            \n            let filament_age = filamentage(spool.purchasedOn);\n             box = {\n                \"boxID\" : boxes[i].boxID,\n                \"box_colour\" : boxes[i].colour,\n                \"box_name\": neverEmpty(boxes[i].name),\n                \"box_temperature\": tempCalc(boxes[i].temperature, temp_unit),\n                \"box_humidity\": neverEmpty(boxes[i].humidity),\n                \"box_template\": boxes[i].box_template,     //loaded/empty/full\n                \"box_dissecant_age\": neverEmpty(elapsed),\n                \"filament_type\": neverEmpty(spool.material),\n                \"filament_brand\": neverEmpty(spool.vendor),\n                \"filament_colour\": neverEmpty(spool.color),\n                \"filament_print_hotend\": neverEmpty(spool.temperature),\n                \"filament_print_bed\": neverEmpty(spool.bedTemperature),\n                \"filament_left\":  filament_left, \n                \"filament opened\":neverEmpty(filament_age),\n                \"filament_price\": neverEmpty(spool.cost),\n                \"filament_link\": neverEmpty(spool.purchasedFrom)\n                \n            }\n            msg.UI_template = boxes[i].template;\n        }\n        \n        if(spool_index === undefined){\n            \n            box = {\n                    \"boxID\" : boxes[i].boxID,\n                    \"box_colour\" : boxes[i].colour,\n                    \"box_name\": neverEmpty(boxes[i].name),\n                    \"box_temperature\": tempCalc(boxes[i].temperature, temp_unit),\n                    \"box_humidity\": neverEmpty(boxes[i].humidity),\n                    \"box_template\": \"empty\",     //loaded/empty/full\n                    \"box_dissecant_age\": neverEmpty(elapsed),\n                    \"filament_type\": null,\n                    \"filament_brand\": null,\n                    \"filament_colour\": null,\n                    \"filament_print_hotend\": null,\n                    \"filament_print_bed\": null,\n                    \"filament_left\":  null, // lets see if % or meters work better\n                    \"filament opened\":null,\n                    \"filament_price\": null,\n                    \"filament_link\": null\n            }\n            msg.UI_template = \"empty\";\n        }\n    \n    msg.push(box);\n    \n}\n\nreturn [msg];\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 900,
+        "wires": [
+            [
+                "8b1a80ac8feca780"
+            ]
+        ]
+    },
+    {
+        "id": "8b1a80ac8feca780",
+        "type": "switch",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "",
+        "property": "box_template",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "empty",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "full",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "loaded",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 490,
+        "y": 900,
+        "wires": [
+            [
+                "d9c77b500d9f6d5b"
+            ],
+            [
+                "ed8ad2af353abc74"
+            ],
+            [
+                "c854147ec7146282"
+            ]
+        ]
+    },
+    {
+        "id": "a4ced0c9bb1a5050",
+        "type": "ui_svg_graphics",
+        "z": "7b277ca144864600",
+        "g": "0b21ca30572b76cf",
+        "group": "7a566945.7999d8",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "svgString": "",
+        "clickableShapes": [
+            {
+                "targetId": "#REMOVE",
+                "action": "click",
+                "payload": "0",
+                "payloadType": "num",
+                "topic": "RemoveButton"
+            },
+            {
+                "targetId": "#NEW",
+                "action": "click",
+                "payload": "0",
+                "payloadType": "num",
+                "topic": "NEW"
+            },
+            {
+                "targetId": "#desiccant",
+                "action": "dblclick",
+                "payload": "0",
+                "payloadType": "str",
+                "topic": "desiccant"
+            }
+        ],
+        "javascriptHandlers": [],
+        "smilAnimations": [],
+        "bindings": [],
+        "showCoordinates": false,
+        "autoFormatAfterEdit": false,
+        "showBrowserErrors": false,
+        "showBrowserEvents": false,
+        "enableJsDebugging": false,
+        "sendMsgWhenLoaded": false,
+        "noClickWhenDblClick": false,
+        "outputField": "payload",
+        "editorUrl": "//drawsvg.org/drawsvg.html",
+        "directory": "",
+        "panning": "disabled",
+        "zooming": "disabled",
+        "panOnlyWhenZoomed": false,
+        "doubleClickZoomEnabled": false,
+        "mouseWheelZoomEnabled": false,
+        "dblClickZoomPercentage": 150,
+        "cssString": "div.ui-svg svg{   }\ndiv.ui-svg path {\n    \n}\n",
+        "name": "Box 0",
+        "x": 1210,
+        "y": 860,
+        "wires": [
+            [
+                "695ee1ab83e55f77"
+            ]
+        ]
+    },
+    {
+        "id": "7b7a5ea5980e710a",
+        "type": "change",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "Set properties",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.command",
+                "pt": "msg",
+                "to": "replace_svg",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 900,
+        "wires": [
+            [
+                "1f6214a26d4fe312"
+            ]
+        ]
+    },
+    {
+        "id": "695ee1ab83e55f77",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "OnClick Events",
+        "func": "//button events\n\nvar command = msg.topic;\nvar boxID = msg.payload;\nvar boxes = flow.get(\"boxes\");\n\nif(command === \"RemoveButton\"){\n    \n    boxes[boxID].filamentID = null;\n    boxes[boxID].box_template = \"empty\";\n    flow.set(\"boxes\", boxes);\n    \n}\n\nif(command === \"NEW\"){\n    var spoolID = flow.get(\"table_selected.spoolID\");\n    boxes[boxID].filamentID = spoolID;\n    boxes[boxID].box_template = \"full\";\n    flow.set(\"boxes\", boxes);\n    \n}\n\nif(command === \"desiccant\"){\n    \n    let day = new Date();\n    boxes[boxID].desiccant_reset = day.getTime();\n    flow.set(\"boxes\", boxes);\n    \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 900,
+        "wires": [
+            [
+                "2bfb422539075689"
+            ]
+        ]
+    },
+    {
+        "id": "19bab2118baf82fb",
+        "type": "ui_svg_graphics",
+        "z": "7b277ca144864600",
+        "g": "0b21ca30572b76cf",
+        "group": "7a566945.7999d8",
+        "order": 2,
+        "width": 6,
+        "height": 6,
+        "svgString": "",
+        "clickableShapes": [
+            {
+                "targetId": "#REMOVE",
+                "action": "click",
+                "payload": "1",
+                "payloadType": "num",
+                "topic": "RemoveButton"
+            },
+            {
+                "targetId": "#NEW",
+                "action": "click",
+                "payload": "1",
+                "payloadType": "num",
+                "topic": "NEW"
+            },
+            {
+                "targetId": "#desiccant",
+                "action": "dblclick",
+                "payload": "1",
+                "payloadType": "num",
+                "topic": "desiccant"
+            }
+        ],
+        "javascriptHandlers": [],
+        "smilAnimations": [],
+        "bindings": [],
+        "showCoordinates": false,
+        "autoFormatAfterEdit": false,
+        "showBrowserErrors": false,
+        "showBrowserEvents": false,
+        "enableJsDebugging": false,
+        "sendMsgWhenLoaded": false,
+        "noClickWhenDblClick": false,
+        "outputField": "payload",
+        "editorUrl": "//drawsvg.org/drawsvg.html",
+        "directory": "",
+        "panning": "disabled",
+        "zooming": "disabled",
+        "panOnlyWhenZoomed": false,
+        "doubleClickZoomEnabled": false,
+        "mouseWheelZoomEnabled": false,
+        "dblClickZoomPercentage": 150,
+        "cssString": "div.ui-svg svg{   }\ndiv.ui-svg path {\n    \n}\n",
+        "name": "Box 1",
+        "x": 1210,
+        "y": 900,
+        "wires": [
+            [
+                "695ee1ab83e55f77"
+            ]
+        ]
+    },
+    {
+        "id": "153a03c1f5905010",
+        "type": "ui_svg_graphics",
+        "z": "7b277ca144864600",
+        "g": "0b21ca30572b76cf",
+        "group": "7a566945.7999d8",
+        "order": 3,
+        "width": 6,
+        "height": 6,
+        "svgString": "",
+        "clickableShapes": [
+            {
+                "targetId": "#REMOVE",
+                "action": "click",
+                "payload": "2",
+                "payloadType": "num",
+                "topic": "RemoveButton"
+            },
+            {
+                "targetId": "#NEW",
+                "action": "click",
+                "payload": "2",
+                "payloadType": "num",
+                "topic": "NEW"
+            },
+            {
+                "targetId": "#desiccant",
+                "action": "dblclick",
+                "payload": "2",
+                "payloadType": "num",
+                "topic": "desiccant"
+            }
+        ],
+        "javascriptHandlers": [],
+        "smilAnimations": [],
+        "bindings": [],
+        "showCoordinates": false,
+        "autoFormatAfterEdit": false,
+        "showBrowserErrors": false,
+        "showBrowserEvents": false,
+        "enableJsDebugging": false,
+        "sendMsgWhenLoaded": false,
+        "noClickWhenDblClick": false,
+        "outputField": "payload",
+        "editorUrl": "//drawsvg.org/drawsvg.html",
+        "directory": "",
+        "panning": "disabled",
+        "zooming": "disabled",
+        "panOnlyWhenZoomed": false,
+        "doubleClickZoomEnabled": false,
+        "mouseWheelZoomEnabled": false,
+        "dblClickZoomPercentage": 150,
+        "cssString": "div.ui-svg svg{   }\ndiv.ui-svg path {\n    \n}\n",
+        "name": "Box 2",
+        "x": 1210,
+        "y": 940,
+        "wires": [
+            [
+                "695ee1ab83e55f77"
+            ]
+        ]
+    },
+    {
+        "id": "5dd18b657827cf13",
+        "type": "ui_svg_graphics",
+        "z": "7b277ca144864600",
+        "g": "0b21ca30572b76cf",
+        "group": "7a566945.7999d8",
+        "order": 4,
+        "width": 6,
+        "height": 6,
+        "svgString": "",
+        "clickableShapes": [
+            {
+                "targetId": "#REMOVE",
+                "action": "click",
+                "payload": "3",
+                "payloadType": "num",
+                "topic": "RemoveButton"
+            },
+            {
+                "targetId": "#NEW",
+                "action": "click",
+                "payload": "3",
+                "payloadType": "num",
+                "topic": "NEW"
+            },
+            {
+                "targetId": "#desiccant",
+                "action": "dblclick",
+                "payload": "3",
+                "payloadType": "num",
+                "topic": "desiccant"
+            }
+        ],
+        "javascriptHandlers": [],
+        "smilAnimations": [],
+        "bindings": [],
+        "showCoordinates": false,
+        "autoFormatAfterEdit": false,
+        "showBrowserErrors": false,
+        "showBrowserEvents": false,
+        "enableJsDebugging": false,
+        "sendMsgWhenLoaded": false,
+        "noClickWhenDblClick": false,
+        "outputField": "payload",
+        "editorUrl": "//drawsvg.org/drawsvg.html",
+        "directory": "",
+        "panning": "disabled",
+        "zooming": "disabled",
+        "panOnlyWhenZoomed": false,
+        "doubleClickZoomEnabled": false,
+        "mouseWheelZoomEnabled": false,
+        "dblClickZoomPercentage": 150,
+        "cssString": "div.ui-svg svg{   }\ndiv.ui-svg path {\n    \n}\n",
+        "name": "Box 3",
+        "x": 1210,
+        "y": 980,
+        "wires": [
+            [
+                "695ee1ab83e55f77"
+            ]
+        ]
+    },
+    {
+        "id": "9d94a6bfe602dec5",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "look up boxes",
+        "func": "\n//spoool manager doesnt have databaseID on unload, so we have to track \n//changes\nvar spoolID = flow.get(\"loaded_filamentID\");\nvar boxes = flow.get(\"boxes\");\n \n\nvar boxID;\nvar box = boxes.find((o, i) =>{\n    if(o.filamentID === spoolID){\n        boxID = i;\n        node.warn(boxID);\n    }\n});\n\n\n\nif(boxID !== undefined){\n\nboxes[boxID].box_template = \"full\";\nflow.set(\"boxes\", boxes);\n}\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 360,
+        "wires": [
+            [
+                "22bc380802e6d347"
+            ]
+        ]
+    },
+    {
+        "id": "481222bd88ea018f",
+        "type": "delay",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "name": "limit",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "bf507b708116bdfc"
+            ]
+        ]
+    },
+    {
+        "id": "4b789bd11818d5ea",
+        "type": "delay",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 280,
+        "y": 680,
+        "wires": [
+            [
+                "481222bd88ea018f"
+            ]
+        ]
+    },
+    {
+        "id": "ba24f35600ecc33f",
+        "type": "mqtt in",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "Filament Added",
+        "topic": "ender/event/plugin_spoolmanager_spool_added",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "6e117ba5.8026e4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 420,
+        "wires": [
+            [
+                "11d6e64758a8f3b8"
+            ]
+        ]
+    },
+    {
+        "id": "50202422d07d9e90",
+        "type": "sqlite",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "mydb": "dca8ed89c27e5f19",
+        "sqlquery": "fixed",
+        "sql": "SELECT * FROM spo_spoolmodel;",
+        "name": "SpoolManager [copy]",
+        "x": 880,
+        "y": 660,
+        "wires": [
+            [
+                "b15602cc3da7811b"
+            ]
+        ]
+    },
+    {
+        "id": "2bfb422539075689",
+        "type": "link out",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "3586bc344449df44"
+        ],
+        "x": 1635,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "3586bc344449df44",
+        "type": "link in",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "",
+        "links": [
+            "2bfb422539075689",
+            "22bc380802e6d347",
+            "2ba5c99edd024d3c",
+            "b8430307f635fa9b",
+            "59bac512360f3a97",
+            "fb762b8b0d013be1"
+        ],
+        "x": 115,
+        "y": 900,
+        "wires": [
+            [
+                "9a6090af8f7b27ba"
+            ]
+        ]
+    },
+    {
+        "id": "22bc380802e6d347",
+        "type": "link out",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "3586bc344449df44",
+            "bc2658b83b1a7db2"
+        ],
+        "x": 555,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2ba5c99edd024d3c",
+        "type": "link out",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "3586bc344449df44",
+            "bc2658b83b1a7db2"
+        ],
+        "x": 555,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "11d6e64758a8f3b8",
+        "type": "link out",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "bc2658b83b1a7db2"
+        ],
+        "x": 315,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "88d9137164c29203",
+        "type": "link in",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "name": "",
+        "links": [
+            "b8430307f635fa9b"
+        ],
+        "x": 435,
+        "y": 620,
+        "wires": [
+            [
+                "bf507b708116bdfc"
+            ]
+        ]
+    },
+    {
+        "id": "b8430307f635fa9b",
+        "type": "link out",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "3586bc344449df44",
+            "88d9137164c29203"
+        ],
+        "x": 315,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "bc2658b83b1a7db2",
+        "type": "link in",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "name": "",
+        "links": [
+            "2ba5c99edd024d3c",
+            "22bc380802e6d347",
+            "11d6e64758a8f3b8"
+        ],
+        "x": 115,
+        "y": 680,
+        "wires": [
+            [
+                "4b789bd11818d5ea"
+            ]
+        ]
+    },
+    {
+        "id": "528dae77fb81c571",
+        "type": "comment",
+        "z": "7b277ca144864600",
+        "g": "525170f4a5c1127d",
+        "name": "More Info",
+        "info": "Each box needs a separate SVG node with \nboxID set for each action event (on click events)\nand entry added in the boxID switch node.",
+        "x": 1000,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "4ec7a0a74a861a99",
+        "type": "comment",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "name": "More info",
+        "info": "You can add more info to the table in this function\nnode. Just take the data from spools context",
+        "x": 1160,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2fbca2228c3bbffc",
+        "type": "comment",
+        "z": "7b277ca144864600",
+        "g": "1e89ed2b7812bd67",
+        "name": "More info",
+        "info": "Make sure that the smb drive is mounted, and you are accessing it with correct user permissions. If your database isn't connecting but the copy of the file is there (most likely empty), then check your samba user/password in mount command",
+        "x": 620,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "f2aacaee526d8390",
+        "type": "comment",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "More info",
+        "info": "Check the MQTT plugin in your Octoprint instance,\nYou will have to modify the topic for all MQTT events to match these in NodeRED.",
+        "x": 430,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "59bac512360f3a97",
+        "type": "link out",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "3586bc344449df44"
+        ],
+        "x": 1615,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "fb762b8b0d013be1",
+        "type": "link out",
+        "z": "7b277ca144864600",
+        "g": "4c216cc9b00134d5",
+        "name": "",
+        "mode": "link",
+        "links": [
+            "3586bc344449df44"
+        ],
+        "x": 1615,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "cc895845f1cdcb5f",
+        "type": "inject",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Get Meter/MeterPlus ID",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 260,
+        "wires": [
+            [
+                "0e7d03e2af8f725a"
+            ]
+        ]
+    },
+    {
+        "id": "0e7d03e2af8f725a",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Compose",
+        "func": "msg.headers = {Authorization: flow.get(\"SwitchBotAPI\")};\nmsg.url = \"https://api.switch-bot.com/v1.0/devices\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 260,
+        "wires": [
+            [
+                "c35f9e80656f71de"
+            ]
+        ]
+    },
+    {
+        "id": "c35f9e80656f71de",
+        "type": "http request",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 1350,
+        "y": 260,
+        "wires": [
+            [
+                "4e15e4d91e62a3a4"
+            ]
+        ]
+    },
+    {
+        "id": "4e15e4d91e62a3a4",
+        "type": "function",
+        "z": "7b277ca144864600",
+        "g": "842cde5368f3202f",
+        "name": "Save Meters IDs",
+        "func": "//devices\nvar devices = msg.payload.body.deviceList\nvar deviceList = [];\n\nfor( var y in devices) {  \n    if(devices[y].deviceType === \"MeterPlus\" || devices[y].deviceType === \"Meter\"){\n    let device = {\"type\": devices[y].deviceType,\n                  \"name\": devices[y].deviceName,\n                  \"deviceID\": devices[y].deviceId\n                 };\n    deviceList.push(device);\n    }\n} \nflow.set(\"devices\", deviceList);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec59c0d4a3d14932",
+        "type": "ui_ui_control",
+        "z": "7b277ca144864600",
+        "g": "f1583a04a218a6a5",
+        "name": "Load",
+        "events": "connect",
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "b8430307f635fa9b"
+            ]
+        ]
+    },
+    {
+        "id": "6e117ba5.8026e4",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "test.local",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "01a13e238c184c9e",
+        "type": "ui_group",
+        "name": "All Filament Rolls",
+        "tab": "08cea7525a571972",
+        "order": 2,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7a566945.7999d8",
+        "type": "ui_group",
+        "name": "Opened Filament",
+        "tab": "08cea7525a571972",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dca8ed89c27e5f19",
+        "type": "sqlitedb",
+        "db": "/home/pi/spoolmanager1.db",
+        "mode": "RO"
+    },
+    {
+        "id": "08cea7525a571972",
+        "type": "ui_tab",
+        "name": "Filament Store",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
