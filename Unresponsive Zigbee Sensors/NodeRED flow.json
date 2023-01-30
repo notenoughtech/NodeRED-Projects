@@ -1,5 +1,36 @@
 [
     {
+        "id": "e961a2e02fbb335a",
+        "type": "group",
+        "z": "7ad930fe9fc560fd",
+        "name": "Sensor Warnings",
+        "style": {
+            "stroke": "#ff0000",
+            "fill": "#ffdf7f",
+            "label": true,
+            "label-position": "n",
+            "color": "#000000"
+        },
+        "nodes": [
+            "4a0ab706536ae3e1",
+            "9e969eec6fa17757",
+            "22ee913d40d40093",
+            "5f82c85233c7cf0e",
+            "72d52bfa47560478",
+            "59678710c1fd2953",
+            "fdbcaef8bbfd5299",
+            "667796ca550a5ebe",
+            "5dde7cc74912d5d7",
+            "f07a00398f3ff491",
+            "1580f992a5e050c5",
+            "dcab79153d111613"
+        ],
+        "x": 154,
+        "y": 1079,
+        "w": 712,
+        "h": 282
+    },
+    {
         "id": "4a0ab706536ae3e1",
         "type": "inject",
         "z": "7ad930fe9fc560fd",
@@ -171,7 +202,7 @@
         "func": "//see On Start for settings",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "/* for this flow to work, you must store your sensor data in the following format:\n\nAll sensors saved as an array (flow.set(\"sensors\", your_sensor_array)) and each sensor is an object with these values:\nvar sensor = {\"room\":\"hall\",\n              \"last_report\":1675014128151};\n\nYou can obtain the timestamp from each update by using Date.now() function: sensor.last_report = Date.now();\n\nMore about Join in NodeRED: https://notenoughtech.com/featured/how-to-use-join-app-in-nodered/\n*/\n\n\n// set your preferences\n\nvar timeout = 120;                                                     // enter timeout threshold in minutes after which you the sensor will be set to \"unresponsive\" \nvar devices = \"Mi 11\";                                                 // comma separated list of Join device names   OR \nvar deviceIDs = \"\";                                                    // comma separated list of Join deviceIDs\nvar use_names = true                                                   // if true will use Join names, otherwise joinIDs - respective values must be filled\nvar icon =  \"https://cdn-icons-png.flaticon.com/512/3593/3593297.png\"  // publicly available icon for your mobile notification\nvar title = \"Sensor Warning\";                                          // title of your notification\nvar reminder = true;                                                   // reset warnings for the next day\nvar include_battery = true;                                            // include last known battery % - requires \"battery_percent\" key in sensor object            \n\n\n// don't modify anything below this line\n\nvar settings = {\n    \"timeout\" : timeout * 60,\n    \"use_names\": use_names,\n    \"devices\" : devices,\n    \"deviceIDs\": deviceIDs,\n    \"icon\": icon,\n    \"title\": title,\n    \"reminder\" : reminder,\n    \"include_battery\": true\n}\n\nflow.set(\"logs\", []);\nflow.set(\"sensor_notifications\", settings);",
+        "initialize": "/* for this flow to work, you must store your sensor data in the following format:\n\nAll sensors saved as an array (flow.set(\"sensors\", your_sensor_array)) and each sensor is an object with these values:\nvar sensor = {\"room\":\"hall\",\n              \"last_report\":1675014128151};\n\nYou can obtain the timestamp from each update by using Date.now() function: sensor.last_report = Date.now();\n\nMore about Join in NodeRED: https://notenoughtech.com/featured/how-to-use-join-app-in-nodered/\nMake sure join node is installed: node-red-contrib-join-joaoapps\n*/\n\n\n// set your preferences\n\nvar timeout = 120;                                                     // enter timeout threshold in minutes after which you the sensor will be set to \"unresponsive\" \nvar devices = \"Mi 11\";                                                 // comma separated list of Join device names   OR \nvar deviceIDs = \"\";                                                    // comma separated list of Join deviceIDs\nvar use_names = true                                                   // if true will use Join names, otherwise joinIDs - respective values must be filled\nvar icon =  \"https://cdn-icons-png.flaticon.com/512/3593/3593297.png\"  // publicly available icon for your mobile notification\nvar title = \"Sensor Warning\";                                          // title of your notification\nvar reminder = true;                                                   // reset warnings for the next day\nvar include_battery = true;                                            // include last known battery % - requires \"battery_percent\" key in sensor object            \n\n\n// don't modify anything below this line\n\nvar settings = {\n    \"timeout\" : timeout * 60,\n    \"use_names\": use_names,\n    \"devices\" : devices,\n    \"deviceIDs\": deviceIDs,\n    \"icon\": icon,\n    \"title\": title,\n    \"reminder\" : reminder,\n    \"include_battery\": true\n}\n\nflow.set(\"logs\", []);\nflow.set(\"sensor_notifications\", settings);",
         "finalize": "",
         "libs": [],
         "x": 240,
@@ -202,6 +233,82 @@
             [
                 "fdbcaef8bbfd5299"
             ]
+        ]
+    },
+    {
+        "id": "f07a00398f3ff491",
+        "type": "inject",
+        "z": "7ad930fe9fc560fd",
+        "g": "e961a2e02fbb335a",
+        "name": "sample payload from a sensor",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"temperature\":16,\"humididity\":23,\"pressure\":1008.9,\"battery_percent\":null,\"battery_voltage\":null,\"tvoc\":246,\"link\":null,\"lux\":null}",
+        "payloadType": "json",
+        "x": 320,
+        "y": 1120,
+        "wires": [
+            [
+                "1580f992a5e050c5"
+            ]
+        ]
+    },
+    {
+        "id": "1580f992a5e050c5",
+        "type": "change",
+        "z": "7ad930fe9fc560fd",
+        "g": "e961a2e02fbb335a",
+        "name": "Assign room",
+        "rules": [
+            {
+                "t": "set",
+                "p": "room",
+                "pt": "msg",
+                "to": "bedroom",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 1120,
+        "wires": [
+            [
+                "dcab79153d111613"
+            ]
+        ]
+    },
+    {
+        "id": "dcab79153d111613",
+        "type": "function",
+        "z": "7ad930fe9fc560fd",
+        "g": "e961a2e02fbb335a",
+        "name": "save sensor",
+        "func": "// see onStart for flow variable\nvar sensors = flow.get(\"sensors\");\nvar sensor = msg.payload;\n\n\nsensor.timestamp = Date.now();\nsensors.push(sensor);\n\nflow.set(\"sensors\", sensors);\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\n\nflow.set(\"sensors\", []);",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 1120,
+        "wires": [
+            []
         ]
     },
     {
