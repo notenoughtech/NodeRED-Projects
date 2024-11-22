@@ -20,4 +20,6 @@ Current NodeRED related projects are:
  - [Daylight Tracking in NodeRED](https://notenoughtech.com/home-automation/nodered-sun-and-time/)
  - [Aqara E1 Driver in NodeRED](https://notenoughtech.com/home-automation/aqara-roller-shade-driver-e1-zigbee2mqtt/)
  - [TRV auto-calibration](https://notenoughtech.com/home-automation/trv-auto-calibration/) (Apply calibration offset automatically to TRVs)
-  - [Smart Filament Storage](https://notenoughtech.com/3dprint/smart-filament-storage/) (Make a custom dashboard to monitor humidity in your filament boxes and sync up info from Octoprint and Spool Manager)
+ - [Smart Filament Storage](https://notenoughtech.com/3dprint/smart-filament-storage/) (Make a custom dashboard to monitor humidity in your filament boxes and sync up info from Octoprint and Spool Manager)
+ - [SwitchBot API v1.1](https://notenoughtech.com/featured/switchbot-api/) (Updated API for SwitchBot)
+   
